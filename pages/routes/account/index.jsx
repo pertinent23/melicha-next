@@ -9,7 +9,7 @@ export default function Account ( ) {
                 <link rel="stylesheet" href="/css/extends/account.css"/>
             </Head>
             <div class="container-fluid main-container h-100 p-0">
-                <div class="presentation d-flex justify-content-start align-items-center p-5 shadow">
+                <div class="presentation d-flex justify-content-start align-items-center p-5 shadow-sm">
                     <div class="icon content-user-icon">
                         <img src="/img/user1.jpg" alt="icon" class="img d-block position-relative h-100 w-100" />
                     </div>
