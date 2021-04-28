@@ -1,0 +1,204 @@
+:root{
+    --pink: #FB2519;
+    --light-pink: #FD847D;
+    --green: #197D68;
+    --light-green: rgba( 25, 125, 104, 0.2 );
+    --ligt-gray: #F9F9F9;
+    --text: #513D50;
+    --light-blue: #49A3DC;
+    --purple: #7451EB;
+    --dark-purple: #013668;
+    --gradient: linear-gradient( 170deg, #000000, #833C94 );
+}
+
+::-webkit-scrollbar{
+    width: 6px;
+    height: 6px;
+    background-color: transparent;
+}
+  
+::-webkit-scrollbar-thumb{
+    background-color: var( --purple );
+}
+
+@font-face{
+    src: url( "./../police/Aaargh.ttf" );
+    font-family: aaargh;
+}
+
+*{
+    font-family: aaargh;
+    color: var( --text );
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-y: hidden;
+}
+
+body {
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.main-row{
+    background-color: var( --purple );
+}
+
+.main-column{
+    background: transparent;
+    z-index: 5;
+}
+
+.menu-column{
+    background: transparent;
+    z-index: 25;
+}
+
+.main-container{
+    overflow-y: auto !important;
+    overflow-x: hidden;
+    z-index: 8;
+    background-color: #FFFFFF;
+}
+
+.menu-column{
+    height: 100%;
+    overflow-y: auto !important;
+    overflow-x: hidden;
+}
+
+.main-nav .nav-head{
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.navbar-brand span{
+    color: #FFFFFF;
+    font-weight: normal;
+    font-weight: bold;
+}
+
+.main-nav .navbar-toggler{
+    border: 2.4px solid #FFFFFF;
+    height: 35px;
+    width: 40px;
+}
+
+.main-nav .navbar-toggler span{
+    display: block;
+    position: relative;
+    width: 60% !important;
+    left: 20%;
+    height: 2px !important;
+    border-radius: 3px;
+    background-color: #FFFFFF;
+}
+
+.main-nav .navbar-toggler span::after{
+    content: " ";
+    display: block;
+    position: relative;
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 3px;
+    background-color: #FFFFFF;
+    bottom: -4px;
+}
+
+.main-nav .navbar-toggler span::before{
+    content: " ";
+    display: block;
+    position: relative;
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 3px;
+    background-color: #FFFFFF;
+    top: -6px;
+}
+
+.main-nav .navbar-toggler span::before{
+    top: -5px;
+}
+
+.main-nav .navbar-toggler span::after{
+    top: 3px;
+}
+
+.main-nav .nav-item{
+    border: 0px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    transition: background-color 0.2s;
+    cursor: pointer;
+}
+
+
+.main-nav .nav-item:hover{
+    background-color: rgba( 255, 255, 255, 0.15 );
+}
+
+.main-nav .nav-item-content{
+    padding: 8px 18px;
+    border-radius: 2px;
+}
+
+.main-nav .active,
+.main-nav .active:hover{
+    background-color: #FFFFFF;
+}
+
+.main-nav .active .text-center{
+    color: #000000 !important;
+}
+
+.main-nav .nav-item-content img,
+.main-nav .nav-item-content .text-center{
+    font-size: 0.8em;
+    letter-spacing: 0.08em;
+    color: #FFFFFF;
+    opacity: 0.9;
+    font-weight: 600;
+}
+
+.search-space{
+    background-color: var( --ligt-gray );
+    border-radius: 8px;
+    max-width: 450px;
+}
+
+.search-space .input-group-append{
+    width: 40px;
+    cursor: pointer;
+}
+
+#search:hover,
+#search{
+    font-size: 0.8em;
+    height: 36px;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+.user-icon-container{
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #FFFFFF;
+}
+
+.user-icon-container .name,
+.user-icon-container .pseudo{
+    font-size: 0.6em;
+    width: 100%;
+    flex: 1;
+}
+
+.user-icon-container .user-icon{
+    border-radius: 8px;
+}

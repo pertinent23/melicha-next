@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="150" height="150">
+    <circle 
+        r="40" cx="60" cy="70" 
+        stroke="transparent"
+        stroke-width="10"
+        fill="rgba( 255, 255, 255, 0.4 )"
+    />
+    <circle 
+        r="30" cx="80" cy="40" 
+        stroke="transparent"
+        stroke-width="10"
+        fill="rgba( 255, 255, 255, 0.4 )"
+    />
+    <circle 
+        r="20" cx="30" cy="90" 
+        stroke="transparent"
+        stroke-width="10"
+        fill="rgba( 255, 255, 255, 0.4 )"
+    />
+    <circle 
+        r="40" cx="80" cy="95" 
+        stroke="transparent"
+        stroke-width="10"
+        fill="rgba( 255, 255, 255, 0.4 )"
+    />
+    <circle 
+        r="40" cx="45" cy="40" 
+        stroke="transparent"
+        stroke-width="10"
+        fill="rgba( 255, 255, 255, 0.4 )"
+    />
+    <circle 
+        r="40" cx="45" cy="90" 
+        stroke="transparent"
+        stroke-width="10"
+        fill="rgba( 255, 255, 255, 0.4 )"
+    />
+    <circle 
+        r="40" cx="100" cy="50" 
+        stroke="transparent"
+        stroke-width="10"
+        fill="rgba( 255, 255, 255, 0.4 )"
+    />
+</svg>
