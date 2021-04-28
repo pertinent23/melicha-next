@@ -1,12 +1,20 @@
 import Root from "./routes/Root";
+import App from "next/app";
 
 function MyApp( { Component, pageProps } ) {
-    console.log( Component.page )
     return (
         <Root page={ Component.page }>
             <Component { ...pageProps } />
         </Root>
     );
+};
+
+MyApp.getInitialProps = async ( appContext ) => {
+    const
+        appProps = await App.getInitialProps( appContext );
+    return {
+        ...appProps
+    };
 };
 
 export default MyApp;

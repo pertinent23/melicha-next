@@ -13,7 +13,7 @@ export default function Header ( { title } ) {
                 </div>
             </div>
             <div className="col-2 col-md-4 col-lg-3 p-0 px-2 d-flex justify-content-center">
-                <div className="d-flex position-relative justify-content-center align-items-center user-icon-container p-1 shadow">
+                <div className="d-flex position-relative justify-content-center align-items-center user-icon-container p-1">
                     <img src="/img/person.svg" alt="icon" className="img ml-md-2 user-icon" height="25" width="25" />
                     <div className="d-none flex-column d-md-flex justify-content-center align-items-center mx-4">
                         <span className="d-flex position-relative name"> Franck Duval </span>

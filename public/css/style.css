@@ -3,7 +3,7 @@
     --light-pink: #FD847D;
     --green: #197D68;
     --light-green: rgba( 25, 125, 104, 0.2 );
-    --ligt-gray: #F9F9F9;
+    --ligt-gray: #EFEFEF;
     --text: #513D50;
     --light-blue: #49A3DC;
     --purple: #7451EB;
@@ -215,6 +215,8 @@ body {
     border-radius: 8px;
     cursor: pointer;
     background-color: #FFFFFF;
+    border: 1px solid #EEEEEE;
+    box-shadow: 0px 0px 5px #EEEEEE;
 }
 
 .user-icon-container .name,
