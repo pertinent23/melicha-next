@@ -1,6 +1,7 @@
 .content-fomation-item{
     flex: 1;
     min-height: 500px;
+    flex-wrap: wrap;
 }
 
 .formation-option{
