@@ -1,0 +1,116 @@
+.formation-container,
+.banner{
+    background-color: #FFFFFF;
+}
+
+.banner .banner-img{
+    max-height: 280px;
+}
+
+#diaporama .banner-img{
+    filter: grayscale( 100% );
+}
+
+#diaporama .carousel-inner{
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+#diaporama .carousel-inner::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 5;
+    height: 100%;
+    width: 100%;
+    background: var( --gradient );
+    opacity: 0.6;
+}
+
+.banner #diaporama .carousel-button{
+    z-index: 15;
+}
+
+.formation-container{
+    max-width: 500px;
+    min-height: 100%;
+}
+
+.formation-container .formation-item{
+    background-color: #FFFFFF;
+    border-radius: 3px;
+    max-width: 500px;
+    height: 220px;
+    border: 1px solid #EEEEEE;
+    transition: box-shadow 0.3s;
+}
+
+.formation-container .formation-item:hover{
+    box-shadow: 0px 0px 12px #EEEEEE;
+}
+
+.formation-container .formation-item .badge{
+    height: 40px;
+    width: 40px;
+    font-size: 0.8em;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.formation-container .formation-item .text{
+    font-size: 1.2em;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.formation-container .formation-item .description{
+    font-size: 0.8em;
+    color: rgba( 255, 255, 255, 0.8 );
+    font-weight: 600;
+}
+
+.formation-container .formation-item .btn{
+    height: 35px;
+    font-size: 0.6em;
+    height: 25px;
+    border-radius: 3px;
+}
+
+.unstart{
+    background-color: var( --dark-purple ) !important;
+}
+
+.start{
+    background-color: var( --pink ) !important;
+}
+
+.formation-container .formation-item .btn,
+.formation-container .formation-item .btn:focus,
+.formation-container .formation-item .badge{
+    background-color: #FFFFFF;
+    color: var( --dark );
+    font-weight: 600;
+    box-shadow: none !important;
+}
+
+.stat-container{
+    background-color: var( --purple );
+}
+
+.stat-container div{
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+canvas{
+    width: 100%;
+    max-width: 400px;
+}
+
+@media screen and ( max-width: 768px ){
+    .menu-column{
+        height: auto !important;
+    }
+}

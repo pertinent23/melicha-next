@@ -1,0 +1,50 @@
+modify.content-fomation-item{
+    flex: 1;
+    min-height: 500px;
+    flex-wrap: wrap !important;
+}
+
+.formation-option{
+    width: 350px;
+    height: 220px;
+    border: 2px dashed #DDDDDD;
+}
+
+.formation-option:nth-child( 1 ) {
+    background-color: var( --dark-purple );
+    border: none;
+}
+
+.formation-option:nth-child( 2 ) {
+    background-color: var( --pink );
+    border: none;
+}
+
+.formation-option .item-title{
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+.formation-option .item-icon{
+    background-color: #FFFFFF;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.formation-option .item-text{
+    color: #FFFFFF;
+    font-weight: rgba( 255, 255, 255, 0.8 );
+    font-size: 0.95em;
+}
+
+.formation-option .btn:focus,
+.formation-option .btn{
+    background-color: #FFFFFF;
+    color: var( --dark );
+    font-size: 0.75em;
+    letter-spacing: 0.12em;
+    box-shadow: none;
+}

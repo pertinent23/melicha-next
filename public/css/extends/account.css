@@ -1,0 +1,26 @@
+.presentation{
+    height: 70px;
+}
+
+.presentation .content-user-icon{
+    height: 55px;
+    width: 55px;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.presentation .content-pseudo{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#modify{
+    background-color: var( --purple );
+    color: #FFFFFF;
+    border: none;
+    font-size: 0.8em;
+    padding: 8px 30px;
+    padding-top: 9px;
+    font-weight: bold;
+    outline: none;
+}
