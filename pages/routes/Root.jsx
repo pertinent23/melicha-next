@@ -21,7 +21,7 @@ export default function Root( { children, page } ) {
             </Head>
             <div className="cover-container h-100 w-100 d-flex flex-column main">
                 <div className="container-fluid row d-flex flex-row p-0 m-0 h-100 main-row">
-                    <div className="col-0 col-md-4 col-lg-3 p-0 menu-column">
+                    <div className="col-0 col-md-4 col-lg-3 p-0 menu-column h-auto">
                         <Navigation page={ page } />
                     </div>
                     <div className="col-12 col-md-8 col-lg-9 p-0 h-100 main-column" id="root">
@@ -33,6 +33,14 @@ export default function Root( { children, page } ) {
             <script src="/script/main.js"></script>
         </Fragment>
     );
+};
+
+export async function getServerSideProps() {
+    return {
+        props: {
+            data: { }
+        }
+    };
 };
 
 Root.propTypes = {

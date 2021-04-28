@@ -8,6 +8,7 @@
     --light-blue: #49A3DC;
     --purple: #7451EB;
     --dark-purple: #013668;
+    --shadow-purple: #5431DB;
     --gradient: linear-gradient( 170deg, #000000, #833C94 );
 }
 
@@ -24,6 +25,12 @@
 @font-face{
     src: url( "./../police/Aaargh.ttf" );
     font-family: aaargh;
+}
+
+#__next{
+    display: block;
+    position: relative;
+    width: 100%;
 }
 
 *{
@@ -45,7 +52,7 @@ body {
 }
 
 .main-row{
-    background-color: var( --purple );
+    background-color: var( --shadow-purple );
 }
 
 .main-column{
@@ -56,6 +63,26 @@ body {
 .menu-column{
     background: transparent;
     z-index: 25;
+    background-image: url( "/img/menu2.jpeg" );
+    background-size: 100% 100%;
+    background-position: fixed;
+}
+
+.menu-column::after{
+    content: " ";
+    background-color: var( --purple );
+    position: absolute;
+    display: block;
+    z-index: 5;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    opacity: 0.7;
+}
+
+.menu-column nav{
+    z-index: 10;
 }
 
 .main-container{
@@ -150,7 +177,7 @@ body {
 
 .main-nav .active,
 .main-nav .active:hover{
-    background-color: #FFFFFF;
+    background-color: rgba( 255, 255, 255, 0.85 );
 }
 
 .main-nav .active .text-center{
