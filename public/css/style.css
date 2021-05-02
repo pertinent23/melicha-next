@@ -54,6 +54,8 @@ body {
 .main-row{
     background-color: var( --shadow-purple );
     background-image: url( "/img/menu2.jpeg" );
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
 .main-column{
@@ -230,9 +232,9 @@ body {
     border-radius: 8px;
 }
 
-@media screen and ( max-width: 768 ) {
+@media screen and ( min-width: 768 ) {
     .main-row{
-        background-size: 100% 100%;
+        background-size: 100% auto;
         background-position: fixed;
     }   
 }

@@ -1,0 +1,71 @@
+.content-exercise-item{
+    flex: 1;
+    min-height: 500px;
+    flex-wrap: wrap !important;
+}
+
+.exercise-option{
+    width: 350px;
+    height: 230px;
+    border: 1px solid #DDDDDD;
+    background-color: var( --dark-purple );
+}
+
+.exercise-option span{
+    color: #FFFFFF !important;
+    font-weight: bold;
+    font-size: 0.9em;
+    letter-spacing: 0.15em;
+    z-index: 10;
+}
+
+.exercise-option span .badge{
+    color: var( --dark ) !important;
+    font-size: 1.1em;
+}
+
+.exercise-option .button{
+    color: var( --dark ) !important;
+    bottom: 8px;
+    right: 8px;
+    background-color: #FFFFFF;
+    font-size: 0.7em;
+    padding: 4px 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.exercise-option::after{
+    content: " ";
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    background-image: linear-gradient( 120deg, rgba( 0, 0, 0, 0.1 ), rgba( 0, 0, 0, 0.5 ) );
+}
+
+.exercise-option:nth-child( 1n ) {
+    background-color: var( --shadow-purple );
+}
+
+.exercise-option:nth-child( 2n ) {
+    background-color: var( --green );
+}
+
+.exercise-option:nth-child( 3n ) {
+    background-color: var( --dark-purple );
+}
+
+.exercise-option:nth-child( 4n ) {
+    background-color: var( --pink );
+}
+
+.exercise-option:nth-child( 5n ) {
+    background-color: var( --purple );
+}
+
+.exercise-option:nth-child( 6n ) {
+    background-color: var( --dark-purple );
+}

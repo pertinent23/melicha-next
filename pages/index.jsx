@@ -8,6 +8,7 @@ export default function Home() {
         <Fragment>
             <Head>
                 <link rel="stylesheet" href="/css/extends/home.css"/>
+                <link rel="preload" href="/script/extends/home.js" as="script" type="text/javascript"/>
             </Head>
             <div className="container-fluid main-container h-100">
                 <div className="container-fluid p-0 d-flex flex-column justify-content-center align-items-center">
@@ -27,25 +28,25 @@ export default function Home() {
                             </ol>
                             <div className="carousel-inner">
                                 <div className="carousel-item active">
-                                    <img src="./img/img1.jpg" alt="img" className="img banner-img d-block w-100" />
+                                    <img src="/img/img1.jpg" alt="img" className="img banner-img d-block w-100" />
                                     <div className="carousel-caption">
                                         <h6 className="text-light"> Souris </h6>
                                     </div>
                                 </div>
                                 <div className="carousel-item">
-                                    <img src="./img/img2.jpg" alt="img" className="img banner-img d-block w-100" />
+                                    <img src="/img/img2.jpg" alt="img" className="img banner-img d-block w-100" />
                                     <div className="carousel-caption">
                                         <h6 className="text-light"> Souris noire </h6>
                                     </div>
                                 </div>
                                 <div className="carousel-item">
-                                    <img src="./img/img3.jpg" alt="img" className="img banner-img d-block w-100" />
+                                    <img src="/img/img3.jpg" alt="img" className="img banner-img d-block w-100" />
                                     <div className="carousel-caption">
                                         <h6 className="text-light"> Ordinateur </h6>
                                     </div>
                                 </div>
                                 <div className="carousel-item">
-                                    <img src="./img/img4.jpg" alt="img" className="img banner-img d-block w-100" />
+                                    <img src="/img/img4.jpg" alt="img" className="img banner-img d-block w-100" />
                                     <div className="carousel-caption">
                                         <h6 className="text-light"> Clavier </h6>
                                     </div>
@@ -121,9 +122,9 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <script src="/script/extends/home.js"></script>
         </Fragment>
     );
 };
 
 Home.page = page;
+Home.scripts = [ '/script/extends/home.js' ];

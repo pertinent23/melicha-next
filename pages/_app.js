@@ -1,11 +1,17 @@
 import Root from "./routes/Root";
 import App from "next/app";
+import { Fragment } from 'react';
 
 function MyApp( { Component, pageProps } ) {
     return (
-        <Root page={ Component.page }>
-            <Component { ...pageProps } />
-        </Root>
+        <Fragment>
+            <Root page={ Component.page }>
+                <Component { ...pageProps } />
+            </Root>
+            { Component.scripts ? Component.scripts.map( ( url, t, index ) => (
+                <script src={ url } key={ index } data-t={ t }></script>
+            ) ) : "" }
+        </Fragment>
     );
 };
 

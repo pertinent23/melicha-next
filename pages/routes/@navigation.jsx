@@ -94,6 +94,11 @@ Pile.addAll( {
         href: "/routes/courses",
         content: "Mes cours"
     },
+    exercise: {
+        img: "game",
+        href: "/routes/exercise",
+        content: "Exercice"
+    },
     account: {
         img: "person",
         href: "/routes/account",
