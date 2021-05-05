@@ -46,7 +46,7 @@ export const GameBody = ( { children, name, title, gameInfos, canvas } ) => (
     </Fragment>
 );
 
-export default function () {
+export default function Main () {
     return (
         <br/>
     );
