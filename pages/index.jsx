@@ -10,7 +10,7 @@ export default function Home() {
                 <link rel="stylesheet" href="/css/extends/home.css"/>
                 <link rel="preload" href="/script/extends/home.js" as="script" type="text/javascript"/>
             </Head>
-            <div className="container-fluid main-container h-100">
+            <div className="container-fluid main-container h-100 d-none">
                 <div className="container-fluid p-0 d-flex flex-column justify-content-center align-items-center">
                     <Header title={ "Bienvenue !! " } />
                 </div>

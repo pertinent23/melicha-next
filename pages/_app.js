@@ -8,7 +8,7 @@ function MyApp( { Component, pageProps } ) {
         route = useRouter(),
         event = 'routeChangeComplete',
         handle = function ( url ) {
-            if( url === '/' || /\/routes\/exercise\/[a-z\-]{0,}/.test( url ) )
+            if( url === '/' || /\/routes\/exercise\/[a-z\-]{0,}/.test( url ) || url )
                 return window.location.reload();
         };
             useEffect( function () {

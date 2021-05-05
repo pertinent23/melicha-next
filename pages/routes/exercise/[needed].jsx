@@ -32,7 +32,7 @@ export const Contents = {
                 <Head>
                     <link rel="stylesheet" href="/css/extends/exercise.css"/>
                 </Head>
-                <div className="container-fluid main-container h-100">
+                <div className="container-fluid main-container h-100 d-none">
                     <div className="container-fluid p-0 d-flex flex-column justify-content-center align-items-center">
                         <Header title={ "Exercice" } />
                     </div>

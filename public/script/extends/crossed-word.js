@@ -28,10 +28,27 @@ const
         border: '#000000',
         mainPuzz: 'purple',
         puzz: '#000000',
-        true: 'green',
-        false: 'red'
+        true: 'rgba( 0, 255, 0, 0.4 )',
+        false: 'rgba( 255, 0, 0, 0.4 )'
     },
+    /** 
+        * 
+        * Les models décrivent les donnés
+        * qu'on va ajouter sur le canvas dans
+        * chaque object DrawSpace les données qu'il 
+        * ajoutent sont définies à l'aide de la constante
+        * qui sont qui contenues dans la propriété args du Model
+        * Ex: Model.args contient l'ensemble des constantes utilisables 
+        * à l'interieur du model 
+        * 
+    */
     BorderModel = DefineModel( BorderWidth, BorderWidth, function ( x, y, width, height, data ) {
+        /**
+            * BorderModel permet de définir les contours de
+            * l'espace cliquable
+            * Se sont les zones ou on peut ajouter les
+            * contenu des puzzels 
+        */
         const position = BorderWidth / 2;
             this.strokeStyle = data.isMain ? Color.mainPuzz : Color.border;
             this.lineWidth = position;
@@ -42,6 +59,11 @@ const
         return this;
     }, { } ),
     PuzzModel = DefineModel( 0, 0, function ( x, y, width, height, data ) {
+        /**
+            * PuzzModel permet d'écrire à l'interieur des 
+            * DrawSpace à l'aide des propriéte .word et 
+            * .isMain des args 
+        */
         const 
             position = Font.size / 2,
             innerBorder = BorderWidth * 2;
@@ -54,6 +76,11 @@ const
         );
     }, { } ),
     PuzzFillModel = DefineModel( 0, 0, function ( x, y, width, height, data ) {
+        /**
+            * Ce Model permet de colorier l'interieur
+            * du DrawSpace aver une couleur definit par
+            * .color de .args 
+        */
         const innerBorder = BorderWidth * 2;
             this.fillStyle = data.color;
         return this.fillRect( 
@@ -62,10 +89,17 @@ const
         );
     } );
 
-Utils.result = 5;
-Utils.__storage__ = { };
+Utils.result = 5; // le resultat final de l'utilisateur
+Utils.__storage__ = { }; // les contenues
 
 Utils.__organyse__ = function ( list ) {
+    /**
+        * Organise permet de créer une
+        * object littéral contenant une 
+        * clé de type Number et une valeur 
+        * qui est une option parmit les mots que
+        * l'utilisateur doit organiser. 
+    */
     let 
         result = { },
         i = 0;
@@ -75,6 +109,11 @@ Utils.__organyse__ = function ( list ) {
 };
 
 Utils.__ItsCanBeJoin__ = function ( word_a, word_b ) {
+    /**
+        * Cette fonction prends en paramètre deux
+        * variables de type String et détermine s'il ya de
+        * points de liason possible entre ces 02 mots 
+    */
     const 
         result = {},
         occurs = {};
@@ -94,10 +133,29 @@ Utils.__ItsCanBeJoin__ = function ( word_a, word_b ) {
                 for ( let item in result ) 
                     occurs[ item ] = Utils.allIndexOf( word_a, item );
         result.occurs = occurs;
+        /** 
+            * 
+            * Cette retourne un object litteral 
+            * qui contient un ensemble de clé qui
+            * sont des lettres et ayant pour valeur le nombre
+            * d'occurence dans le mot b
+            * et des clés particulières qui sont
+            * occurs qui contient chacunes des clés 
+            * précedentes mais le nombre d'occurence 
+            * dans le mot a cette foi
+            * 
+        */
     return result;
 };
 
 Utils.__search__link__ = function ( mlist ) {
+    /**
+        *
+        * Cette fonction va determiner tous
+        * les points de liaisons de chaque mots
+        * avec tous les reste des mots de la liste
+        * 
+    */
     Utils.__storage__.sortedList = Utils.sortStringDesc( mlist );
     Utils.__storage__.organysed = Utils.__organyse__(
         Utils.__storage__.sortedList
@@ -484,6 +542,17 @@ Digital( function ( $ ) {
         initEvent = function () {
             return $( "#next-button" ).click( function () {
                 Utils.verify();
+                $( '.content-result' ).text( 'Resultat: '.concat( '' + Utils.result  ).concat( '/5' ) );
+                const node = $( this );
+                        node.removeClass( 'verify' );
+                    node.text( 'Suivant' );
+                return node.click( function () {
+                    /** 
+                        * Envoyer les données au niveau
+                        * du serveur. 
+                        * pour les statistique
+                    */
+                } );
             } );  
         },
         init = function () {
@@ -500,7 +569,11 @@ Digital( function ( $ ) {
                     init();
                 actions = 1;
             } else {
-                console.log( 'ici' );
+                /**
+                    * S'il ya pas d'entrées on prend les 
+                    * données au niveau du cerveur
+                    * pas un fetch ou par une requette Ajax 
+                */
             }
         return data;
     } )( $ );

@@ -24,7 +24,10 @@ export default function Root( { children, page } ) {
                     <div className="col-0 col-md-4 col-lg-3 p-0 menu-column h-auto">
                         <Navigation page={ page } />
                     </div>
-                    <div className="col-12 col-md-8 col-lg-9 p-0 h-100 main-column" id="root">
+                    <div className="col-12 col-md-8 col-lg-9 p-0 h-100 main-column bg-light" id="root">
+                        <div className="container-fluid content-loader d-flex justify-content-center align-items-center h-100">
+                            <div className="loader"></div>
+                        </div>
                         { children }
                     </div>
                 </div>

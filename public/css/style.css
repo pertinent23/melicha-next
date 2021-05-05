@@ -232,9 +232,33 @@ body {
     border-radius: 8px;
 }
 
+.loader{
+    height: 250px;
+    width: 250px;
+    border-radius: 100%;
+    border: 8px solid var( --purple );
+    border-top-color: transparent;
+    animation: loader 1.25s ease-out 0s infinite;
+}
+
+@keyframes loader {
+    from {
+        transform: rotate( 0deg );
+    }
+
+    to {
+        transform: rotate( 360deg );
+    }
+}
+
 @media screen and ( min-width: 768 ) {
     .main-row{
         background-size: 100% auto;
         background-position: fixed;
-    }   
+    }  
+
+    .loader{
+        width: 350px;
+        height: 350px;
+    }
 }

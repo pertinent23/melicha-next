@@ -20,6 +20,10 @@
     max-height: 450px !important;
 }
 
+.verify{
+    background-color: var( --dark-purple ) !important;
+}
+
 #next-button{
     background-color: var( --purple );
     border: none;
@@ -61,4 +65,9 @@
 
 .stroke{
     text-decoration: line-through;
+}
+
+.content-result{
+    font-size: 0.9em;
+    font-weight: bold;
 }

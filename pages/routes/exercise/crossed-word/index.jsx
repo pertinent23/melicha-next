@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 import { page } from './../[needed]';
 import Head from 'next/head';
-import Header from './../../@header';
+import { GameBody } from './../../@game';
 
 export default function CrossedWord ( ) {
     return (
@@ -10,7 +10,7 @@ export default function CrossedWord ( ) {
                 <script src="/script/canvas.js"></script>
                 <link rel="stylesheet" href="/css/game.css"/>
             </Head>
-            <div className="container-fluid main-container position-relative h-100">
+            <div className="container-fluid main-container position-relative h-100 d-none">
                 <div className="container-fluid api api-items p-0">
                     <div className="container-fluid d-flex position-relative justify-content-center align-items-center p-0">
                         <div className="d-flex position-relative flex-column api-list border rounded">
@@ -27,31 +27,29 @@ export default function CrossedWord ( ) {
                         </div>
                     </div>
                 </div>
-                <div className="container-fluid p-0 d-flex flex-column justify-content-center align-items-center">
-                    <Header title={ "Mots flechés" } />
-                </div>
-                <div className="container-fluid p-0 py-4 d-flex flex-column justify-content-center align-items-center content-exercise-item pt-5 mb-5">
-                    <div className="container-fluid">
-                        <div className="container-fluid postion-relative d-flex flex-column game-infos py-4 rounded" role="alert">
-                            <span> Le but du jeux est de remplire les vides à l'aide des mots proposé. </span>
-                            <span className="ml-4"> - Pour remplire une colone il suffit de cliquer sur son identifiant </span>
-                            <span className="ml-4"> - Pour effacer le contenu d'une colone il suffit de cliquer sur son identifiant une seconde foi.  </span>
-                        </div>
-                        <div className="container-fluid list-group">
-                            <div className="list-group-item main-list-item border-left-0 border-right-0 py-2 pt-4 border-top-0"> 1. </div>
-                            <div className="list-group-item main-list-item border-left-0 border-right-0 py-2 pt-4"> 2. </div>
-                            <div className="list-group-item main-list-item border-left-0 border-right-0 py-2 pt-4"> 3. </div>
-                            <div className="list-group-item main-list-item border-left-0 border-right-0 py-2 pt-4"> 4. </div>
-                            <div className="list-group-item main-list-item border-left-0 border-right-0 py-2 pt-4"> 5. </div>
-                        </div>
+                <GameBody
+                    canvas={ true }
+                    title="Mots fléchés"
+                    name="vérifier"
+                    gameInfos={ function () {
+                        return (
+                            <Fragment>
+                                <span className="py-2"> Le but du jeux est de remplire les vides à l'aide des mots proposés. </span>
+                                <span className="ml-4"> - Pour remplire une colone il suffit de cliquer sur son identifiant </span>
+                                <span className="ml-4"> - Pour effacer le contenu d'une colone il suffit de cliquer sur son identifiant une seconde foi.  </span>
+                                <span className="ml-4"> - Après avoir fini de remplir, cliquer sur suivant pour continuer.  </span>
+                            </Fragment>
+                        );
+                    } }
+                >
+                    <div className="container-fluid list-group">
+                        <div className="list-group-item main-list-item border-left-0 border-right-0 py-2 pt-4 border-top-0"> 1. </div>
+                        <div className="list-group-item main-list-item border-left-0 border-right-0 py-2 pt-4"> 2. </div>
+                        <div className="list-group-item main-list-item border-left-0 border-right-0 py-2 pt-4"> 3. </div>
+                        <div className="list-group-item main-list-item border-left-0 border-right-0 py-2 pt-4"> 4. </div>
+                        <div className="list-group-item main-list-item border-left-0 border-right-0 py-2 pt-4"> 5. </div>
                     </div>
-                    <div className="container-fluid d-flex position-relative justify-content-center py-5">
-                        <canvas id="myCanvas" width="550" height="400" className="d-block position relative border"></canvas>
-                    </div>
-                    <div className="container-fluid content-next-button d-flex position-relative justify-content-end pb-4">
-                        <button id="next-button"> Suivant </button>
-                    </div>
-                </div>
+                </GameBody>
             </div>
         </Fragment>
     );

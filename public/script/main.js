@@ -5,3 +5,8 @@
         } );
     } );
 } )( window.Digital );
+
+Digital( function ( $ ) {
+    $( '.content-loader' ).remove();
+    return $( '.main-container' ).removeClass( 'd-none' );
+} );
