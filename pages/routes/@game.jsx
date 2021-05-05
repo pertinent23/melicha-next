@@ -46,6 +46,12 @@ export const GameBody = ( { children, name, title, gameInfos, canvas } ) => (
     </Fragment>
 );
 
+export default function () {
+    return (
+        <br/>
+    );
+};
+
 GameInfos.propTypes = {
     children: element
 };
