@@ -1,0 +1,64 @@
+.game-infos{
+    font-size: 0.9em !important;
+    background-color: var( --dark-purple );
+}
+
+.game-infos,
+.game-infos span{
+    color: #FFFFFF;
+    font-size: 0.88em !important;
+}
+
+.list-group-item{
+    font-size: 0.88em !important;
+}
+
+#myCanvas{
+    width: 100% !important;
+    max-width: 700px !important;
+    height: auto !important;
+    max-height: 450px !important;
+}
+
+#next-button{
+    background-color: var( --purple );
+    border: none;
+    color: #FFFFFF;
+    font-size: 0.85em;
+    padding: 8px 50px;
+    font-weight: bold;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.api-items{
+    display: flex;
+    position: sticky;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    z-index: 100;
+    background-color: rgba( 255, 255, 255, 0.7 );
+    display: none;
+}
+
+.api-title{
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.api-list{
+    max-height: 500px !important;
+    width: 100%;
+    max-width: 700px;
+    background-color: #FFFFFF;
+}
+
+.api-list-item{
+    cursor: pointer;
+}
+
+.stroke{
+    text-decoration: line-through;
+}

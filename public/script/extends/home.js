@@ -1,4 +1,4 @@
-( function ( $ ) {
+Digital( function ( $ ) {
     var data = [ 0, 100, 35, 150 ];
     var labels = [ "june", "July", "August", "September", "november", "december", "january", "february", "march", "april" ];
     var canvas = $( "#chart" );
@@ -51,4 +51,4 @@
             }
         }
     } );
-} )( window.Digital );
+} );

@@ -96,7 +96,7 @@ Pile.addAll( {
     },
     exercise: {
         img: "game",
-        href: "/routes/exercise",
+        href: "/routes/exercise/index",
         content: "Exercice"
     },
     account: {
