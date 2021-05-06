@@ -2,13 +2,51 @@ import Head from 'next/head';
 import { Fragment } from 'react';
 import Header from './routes/@header';
 
+export const Contents = {
+    generate: function ( list ) {
+        let i = 0;
+        const result = [ ];
+            for( const item of list ) {
+                if ( i < 2 ) {
+                    result.push( 
+                        this.getItem( item )
+                    );
+                } else
+                    break;
+                i++;
+            }
+        return result;
+    },
+    getItem: function ( __formation__ ) {
+        return (
+            <div className="container formation-item d-flex flex-column justify-content-around align-items-center px-4 mt-2 unstart" key={ __formation__.name }>
+                <span className="line_1 d-flex position-relative container-fluid justify-content-between align-items-center m-0 p-0">
+                    <span className="badge d-flex justify-content-center align-items-center">
+                        { __formation__.name[ 0 ] }
+                    </span>
+                    <span className="text"> { __formation__.name } </span>
+                </span>
+                <span className="line_2 d-flex position-relative container-fluid justify-content-end align-items-center m-0 p-0 px-3 description">
+                    { __formation__.description }
+                </span>
+                <span className="line_3 d-flex position-relative container-fluid justify-content-end align-items-center m-0 p-0">
+                    <button className="btn px-3"> aller </button>
+                </span>
+            </div>
+        );
+    }
+};
+
 export const page = 'home';
-export default function Home() {
+export default function Home( { list, progression } ) {
     return (
         <Fragment>
             <Head>
                 <link rel="stylesheet" href="/css/extends/home.css"/>
                 <link rel="preload" href="/script/extends/home.js" as="script" type="text/javascript"/>
+                <script>
+                    const entry = [ { progression.toString() } ];
+                </script>
             </Head>
             <div className="container-fluid main-container h-100 d-none">
                 <div className="container-fluid p-0 d-flex flex-column justify-content-center align-items-center">
@@ -77,30 +115,7 @@ export default function Home() {
                         </div>
                         <div className="container rounded">
                             <div className="container rounded formation-container py-3 px-0">
-                                <div className="container formation-item d-flex flex-column justify-content-around align-items-center px-4 mt-2 unstart">
-                                    <span className="line_1 d-flex position-relative container-fluid justify-content-between align-items-center m-0 p-0">
-                                        <span className="badge d-flex justify-content-center align-items-center"> H </span>
-                                        <span className="text"> Hardware </span>
-                                    </span>
-                                    <span className="line_2 d-flex position-relative container-fluid justify-content-end align-items-center m-0 p-0 px-3 description">
-                                        Une petite description de la formation et des éléments qui s'y raportent.
-                                    </span>
-                                    <span className="line_3 d-flex position-relative container-fluid justify-content-end align-items-center m-0 p-0">
-                                        <button className="btn px-3"> Conmmencer </button>
-                                    </span>
-                                </div>
-                                <div className="container formation-item d-flex flex-column justify-content-around align-items-center px-4 mt-2 start">
-                                    <span className="line_1 d-flex position-relative container-fluid justify-content-between align-items-center m-0 p-0">
-                                        <span className="badge d-flex justify-content-center align-items-center"> S </span>
-                                        <span className="text"> Software </span>
-                                    </span>
-                                    <span className="line_2 d-flex position-relative container-fluid justify-content-end align-items-center m-0 p-0 px-3 description">
-                                        Une petite description de la formation et des éléments qui s'y raportent.
-                                    </span>
-                                    <span className="line_3 d-flex position-relative container-fluid justify-content-end align-items-center m-0 p-0">
-                                        <button className="btn px-3"> continuer </button>
-                                    </span>
-                                </div>
+                                { Contents.generate( list ) }
                             </div>
                         </div>
                     </div>
@@ -128,3 +143,24 @@ export default function Home() {
 
 Home.page = page;
 Home.scripts = [ '/script/extends/home.js' ];
+
+export async function getServerSideProps() {
+    const
+        progress = [ 0, 100, 35, 150 ],
+        result = [ ];
+        result.push( {
+            name: 'Hardware',
+            description: 'Une petite description de la formation et des éléments qui s\'y raportent.'
+        } );
+
+        result.push( {
+            name: 'Software',
+            description: 'Une petite description de la formation et des éléments qui s\'y raportent.'
+        } );
+    return {
+        props: {
+            progression: progress,
+            list: result
+        }
+    }  
+};

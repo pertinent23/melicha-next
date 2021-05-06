@@ -10,8 +10,13 @@
     border: 2px dashed #DDDDDD;
 }
 
-.formation-option:nth-child( 1 ) {
+.formation-option:nth-child( 2n + 1 ) {
     background-color: var( --dark-purple );
+    border: none;
+}
+
+.formation-option:nth-child( 2n ) {
+    background-color: var( --pink );
     border: none;
 }
 
@@ -46,6 +51,6 @@
 
 .end-of-page{
     background-color: #EEEEEE;
-    min-height: 100px;
+    min-height: 40px;
     font-size: 0.9em;
 }

@@ -10,12 +10,12 @@
     border: 2px dashed #DDDDDD;
 }
 
-.formation-option:nth-child( 1 ) {
+.formation-option:nth-child( 2n + 1 ) {
     background-color: var( --dark-purple );
     border: none;
 }
 
-.formation-option:nth-child( 2 ) {
+.formation-option:nth-child( 2n ) {
     background-color: var( --pink );
     border: none;
 }
@@ -47,4 +47,10 @@
     font-size: 0.75em;
     letter-spacing: 0.12em;
     box-shadow: none;
+}
+
+.courses-title{
+    font-size: 1.8em;
+    color: var( --dark );
+    font-weight: bold;
 }

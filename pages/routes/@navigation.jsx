@@ -91,7 +91,7 @@ Pile.addAll( {
     },
     courses: {
         img: "myClass",
-        href: "/routes/courses",
+        href: "/routes/courses/all",
         content: "Mes cours"
     },
     exercise: {
@@ -101,7 +101,7 @@ Pile.addAll( {
     },
     account: {
         img: "person",
-        href: "/routes/account",
+        href: "/routes/account/@user",
         content: "Mon compte"
     }
 } );

@@ -1,0 +1,3 @@
+Digital( function ( $ ) {
+    console.log( $ );
+} );

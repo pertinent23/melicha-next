@@ -78,11 +78,11 @@
     border-radius: 3px;
 }
 
-.unstart{
+.unstart:nth-child( 2n + 1 ){
     background-color: var( --dark-purple ) !important;
 }
 
-.start{
+.unstart:nth-child( 2n ){
     background-color: var( --pink ) !important;
 }
 

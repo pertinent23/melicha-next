@@ -1,11 +1,12 @@
 Digital( function ( $ ) {
-    var data = [ 0, 100, 35, 150 ];
-    var labels = [ "june", "July", "August", "September", "november", "december", "january", "february", "march", "april" ];
-    var canvas = $( "#chart" );
+    const 
+        data = entry,
+        labels = [ "june", "July", "August", "September", "november", "december", "january", "february", "march", "april" ],
+        canvas = $( "#chart" );
         canvas.attr( {
             height: canvas.css( "height" )
         } );
-    var context = canvas.getContext( "2d" );
+    const context = canvas.getContext( "2d" );
     new Chart( context, {
         type: "line",
         data: {
