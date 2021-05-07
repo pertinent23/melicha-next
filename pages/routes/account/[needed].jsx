@@ -11,7 +11,7 @@ export const Contents = {
         INSCRIPTION: 'inscription',
         CONNECTION: 'connection'
     },
-    generate: function ( needed ) {
+    generate: function ( needed, data ) {
         if( needed === this.const.CONNECTION ) {
             return this.finalyse(
                 <Connection />
@@ -23,20 +23,20 @@ export const Contents = {
                 );
             } else {
                 return this.finalyse(
-                    this.generateUserPage( needed )
+                    this.generateUserPage( needed, data )
                 );
             }
         }
     },
-    generateUserPage: function ( pseudo ) {
+    generateUserPage: function ( pseudo, data ) {
         return (
             <div className="container-fluid main-container h-100 d-none px-0">
                 <MyAccount 
                     pseudo={ pseudo }
-                    name={ 'name' }
-                    surname={ 'surname' }
-                    email={ 'email' }
-                    icon={ "/img/user1.jpg" }
+                    name={ data.name }
+                    surname={ data.surname }
+                    email={ data.email }
+                    icon={ data.icon }
                 />
             </div>
         );
@@ -54,11 +54,28 @@ export const Contents = {
 };
 
 export const page = "account";
-export default function Account () {
-    const 
-        route = useRouter(),
-        { needed } = route.query;
-    return Contents.generate( needed );
+export default function Account ( { needed, data } ) {
+    return (
+        Contents.generate( needed, data )
+    );
+};
+
+export async function getServerSideProps ( context ) {
+    const
+        { needed } = context.query,
+        result = {
+            name: 'name',
+            pseudo: needed,
+            surname: 'surname',
+            email: 'email1',
+            icon:  "/img/person.svg"
+        };
+    return {
+        props: {
+            data: result,
+            needed: needed
+        }
+    };
 };
 
 Account.page = page;

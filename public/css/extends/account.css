@@ -1,3 +1,8 @@
+.main-container{
+    background-image: url( '/img/background.svg' );
+    background-size: 100% 100%;
+}
+
 .presentation{
     height: 60px;
     border-bottom-left-radius: 4px;
@@ -17,6 +22,12 @@
     font-weight: bold;
 }
 
+.content-user-infos{
+    background-color: rgba( 255, 255, 255, 0.2 );
+    backdrop-filter: blur( 3px );
+    -webkit-backdrop-filter: blur( 3px );
+}
+
 #modify{
     background-color: var( --purple );
     color: #FFFFFF;
@@ -26,4 +37,68 @@
     padding-top: 9px;
     font-weight: bold;
     outline: none;
+}
+
+.form-head{
+    background-color: var( --purple );
+}
+
+.form{
+    background-color: #FFFFFF;
+    max-width: 650px;
+}
+
+.form::after{
+    content: " ";
+    height: 100px;
+    width: 400px;
+    position: absolute;
+    display: block;
+    bottom: 10px;
+    left: 10px;
+    background-image: url( '/img/footer.svg' );
+    background-repeat: no-repeat;
+}
+
+.form-head span{
+    color: #FFFFFF;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.form-name{
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.form input{
+    height: 40px;
+    border: 1px solid #DDDDDD;
+    outline: none;
+    font-size: 0.8em;
+    max-width: 300px !important;
+}
+
+.filled-field:focus{
+    border-color: var( --purple ) !important;
+}
+
+.form .button{
+    outline: none;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 0.8em !important;
+    height: 35px !important;
+    cursor: pointer;
+    z-index: 20;
+}
+
+.form .submit{
+    background-color: var( --shadow-purple );
+}
+
+.form .tiers{
+    background-color:  #FFFFFF;
+    color: var( --shadow-purple );
+    border-color: var( --shadow-purple ) !important;
 }
