@@ -24,7 +24,7 @@ export const Contents = {
                                     result.push(
                                         <Fragment key={ formation }>
                                             <div className="container py-0 my-0 position-relative courses-title mt-5 mb-4">  { formation } </div>
-                                            <div className="container-fluid p-0 pb-4 d-flex flex-row justify-content-center align-items-center content-fomation-item mb-5">
+                                            <div className="container-fluid p-0 pb-2 d-flex flex-row justify-content-center align-items-start content-fomation-item mb-5">
                                                 { list }
                                             </div>
                                         </Fragment>
@@ -38,7 +38,7 @@ export const Contents = {
     },
     getItem: function ( course, formation ) {
         return (
-            <div className="formation-option d-flex flex-column justify-content-between shadow-lg rounded mr-3 mr-lg-4 mb-5" key={ course.name.concat( formation ) }>
+            <div className="formation-option d-flex flex-column justify-content-between shadow-lg rounded mr-3 mr-lg-5 mb-3" key={ course.name.concat( formation ) }>
                 <div className="container d-flex justify-content-between start py-3">
                     <div className="item-title"> { course.name } </div>
                     <div className="item-icon rounded d-flex justify-content-center align-items-center">
@@ -66,11 +66,16 @@ export default function AllCourses ( { list } ) {
             <Head>
                 <link rel="stylesheet" href="/css/extends/courses.css"/>
             </Head>
-            <div className="container-fluid main-container h-100 d-none">
-                <div className="container-fluid p-0 d-flex flex-column justify-content-center align-items-center">
-                    <Header title={ "Tous les cours" } />
+            <div className="container-fluid main-container h-100 d-none px-0">
+                <div className="container-fluid content-icon position-absolute d-flex h-100 w-100 justify-content-center align-items-center">
+                    <img src="/img/myClass.svg" alt="icon" className="img img-responsive"/>
                 </div>
-                { Contents.generate( list ) }
+                <div className="container-fluid content-page pb-4">
+                    <div className="container-fluid p-0 d-flex flex-column justify-content-center align-items-center">
+                        <Header title={ "Tous les cours" } />
+                    </div>
+                    { Contents.generate( list ) }
+                </div>
             </div>
         </Fragment>
     );

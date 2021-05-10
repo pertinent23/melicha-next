@@ -22,8 +22,8 @@ function MyApp( { Component, pageProps } ) {
             <Root page={ Component.page }>
                 <Component { ...pageProps } />
             </Root>
-            { Component.scripts ? Component.scripts.map( ( url, t, index ) => (
-                <script src={ url } key={ index } data-t={ t }></script>
+            { Component.scripts ? Component.scripts.map( ( url ) => (
+                <script src={ url } key={ url }></script>
             ) ) : "" }
         </Fragment>
     );

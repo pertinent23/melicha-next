@@ -100,7 +100,7 @@ Pile.addAll( {
         content: "Exercice"
     },
     account: {
-        img: "person",
+        img: "account",
         href: "/routes/account/@user",
         content: "Mon compte"
     }

@@ -1,3 +1,13 @@
+.content-icon img{
+    height: 270px;
+    width: 270px;
+}
+
+.content-page{
+    background-color: rgba( 255, 255, 255, 0.6 );
+    backdrop-filter: blur( 8px );
+    -webkit-backdrop-filter: blur( 8px );
+}
 .content-fomation-item{
     flex: 1;
     min-height: 500px;

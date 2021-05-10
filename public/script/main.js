@@ -7,6 +7,12 @@
 } )( window.Digital );
 
 Digital( function ( $ ) {
+    $.setStorage( 'jwt', JSON.stringify( {
+        name: 'name',
+        surname: 'surname',
+        pseude: '@user',
+        icon: '/img/person.svg'
+    } ) );
     $( '.content-loader' ).remove();
     return $( '.main-container' ).removeClass( 'd-none' );
 } );

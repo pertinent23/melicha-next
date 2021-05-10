@@ -4,33 +4,50 @@
     flex-wrap: wrap !important;
 }
 
+.content-icon img{
+    width: 270px;
+    height: 270px;
+}
+
+.content-page{
+    background-color: rgba( 255, 255, 255, 0.5 );
+    backdrop-filter: blur( 8px );
+    -webkit-backdrop-filter: blur( 8px );
+}
+
 .exercise-option{
     width: 350px;
-    height: 230px;
-    border: 1px solid #DDDDDD;
-    background-color: var( --dark-purple );
+    min-height: 190px;
+    border-radius: 3px;
+    border: 0px solid;
+    border-top: 50px solid;
+    border-color: var( --dark-purple );
+    background-color: rgba( 255, 255, 255, 0.7 );
+    backdrop-filter: blur( 8px );
+    -webkit-backdrop-filter: blur( 8px );
+    overflow: hidden;
 }
 
 .exercise-option span{
-    color: #FFFFFF !important;
+    color: var( --dark ) !important;
     font-weight: bold;
-    font-size: 0.9em;
+    font-size: 0.8em !important;
     letter-spacing: 0.15em;
     z-index: 10;
 }
 
 .exercise-option span .badge{
-    color: var( --dark ) !important;
-    font-size: 1.1em;
+    color: #FFFFFF !important;
+    font-size: 0.9em !important;
 }
 
 .exercise-option .button{
-    color: var( --dark ) !important;
+    color: #FFFFFF !important;
     bottom: 8px;
     right: 8px;
     background-color: #FFFFFF;
-    font-size: 0.7em;
-    padding: 4px 10px;
+    font-size: 0.7em !important;
+    padding: 7px 15px;
     cursor: pointer;
     z-index: 10;
 }
@@ -43,29 +60,62 @@
     width: 100%;
     top: 0px;
     left: 0px;
-    background-image: linear-gradient( 120deg, rgba( 0, 0, 0, 0.1 ), rgba( 0, 0, 0, 0.5 ) );
+    background-image: linear-gradient( 120deg, rgba( 0, 0, 0, 0.1 ), rgba( 0, 0, 0, 0.25 ) );
+    backdrop-filter: blur( 8px );
+    -webkit-backdrop-filter: blur( 8px );
+    display: none;
 }
 
 .exercise-option:nth-child( 1n ) {
+    border-color: var( --shadow-purple );
+}
+
+.exercise-option:nth-child( 1n ) .badge,
+.exercise-option:nth-child( 1n ) .button{
     background-color: var( --shadow-purple );
 }
 
 .exercise-option:nth-child( 2n ) {
+    border-color: var( --green );
+}
+
+.exercise-option:nth-child( 2n ) .badge,
+.exercise-option:nth-child( 2n ) .button{
     background-color: var( --green );
 }
 
 .exercise-option:nth-child( 3n ) {
+    border-color: var( --dark-purple );
+}
+
+.exercise-option:nth-child( 3n ) .badge,
+.exercise-option:nth-child( 3n ) .button{
     background-color: var( --dark-purple );
 }
 
 .exercise-option:nth-child( 4n ) {
+    border-color: var( --pink );
+}
+
+.exercise-option:nth-child( 4n ) .badge,
+.exercise-option:nth-child( 4n ) .button{
     background-color: var( --pink );
 }
 
 .exercise-option:nth-child( 5n ) {
+    border-color: var( --purple );
+}
+
+.exercise-option:nth-child( 5n ) .badge,
+.exercise-option:nth-child( 5n ) .button{
     background-color: var( --purple );
 }
 
 .exercise-option:nth-child( 6n ) {
-    background-color: var( --dark-purple );
+    border-color: var( --text );
+}
+
+.exercise-option:nth-child( 6n ) .badge,
+.exercise-option:nth-child( 6n ) .button{
+    background-color: var( --text );
 }

@@ -13,7 +13,7 @@ export const Contents = {
     },
     getItem: function ( __formation__ ) {
         return (
-            <div className="formation-option d-flex flex-column justify-content-between shadow-lg rounded mr-3 m-lg-4 mb-4" key={ __formation__.name }>
+            <div className="formation-option d-flex flex-column justify-content-between shadow-lg rounded mr-3 m-lg-5 mb-4" key={ __formation__.name }>
                 <div className="container d-flex justify-content-between start py-3">
                     <div className="item-title"> { __formation__.name } </div>
                     <div className="item-icon rounded d-flex justify-content-center align-items-center"> H </div>
@@ -36,15 +36,20 @@ export default function Formation ( { list } ) {
             <Head>
                 <link rel="stylesheet" href="/css/extends/formation.css"/>
             </Head>
-            <div className="container-fluid main-container h-100 d-none">
-                <div className="container-fluid p-0 d-flex flex-column justify-content-center align-items-center">
-                    <Header title={ "Formation" } />
+            <div className="container-fluid main-container h-100 d-none px-0">
+                <div className="container-fluid content-icon position-absolute d-flex h-100 w-100 justify-content-center align-items-center">
+                    <img src="/img/formations.svg" alt="icon" className="img img-responsive"/>
                 </div>
-                <div className="container-fluid p-0 py-4 d-flex flex-row justify-content-center align-items-start content-fomation-item pt-5">
-                    { Contents.generate( list ) }
-                </div>
-                <div className="container-fluid position-relative m-0 p-0 mt-5 d-flex flex-column justify-content-center align-items-center rounded end-of-page">
-                    <span> ... </span>
+                <div className="container-fluid content-page">
+                    <div className="container-fluid p-0 d-flex flex-column justify-content-center align-items-center">
+                        <Header title={ "Formation" } />
+                    </div>
+                    <div className="container-fluid p-0 py-4 d-flex flex-row justify-content-center align-items-start content-fomation-item pt-5">
+                        { Contents.generate( list ) }
+                    </div>
+                    <div className="container-fluid position-relative m-0 p-0 mt-5 d-flex flex-column justify-content-center align-items-center rounded end-of-page">
+                        <span> ... </span>
+                    </div>
                 </div>
             </div>
         </Fragment>

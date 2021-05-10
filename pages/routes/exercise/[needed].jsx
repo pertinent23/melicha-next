@@ -32,70 +32,75 @@ export const Contents = {
                 <Head>
                     <link rel="stylesheet" href="/css/extends/exercise.css"/>
                 </Head>
-                <div className="container-fluid main-container h-100 d-none">
-                    <div className="container-fluid p-0 d-flex flex-column justify-content-center align-items-center">
-                        <Header title={ "Exercice" } />
+                <div className="container-fluid main-container h-100 d-none px-0">
+                    <div className="container content-icon position-absolute h-100 w-100 d-flex justify-content-center align-items-center">
+                        <img src="/img/game.svg" alt="icon" className="img img-responsive"/>
                     </div>
-                    <div className="container-fluid p-0 py-4 d-flex flex-row justify-content-center align-items-center content-exercise-item pt-5 mb-5">
-                        <div className="exercise-option position-relative d-flex flex-column justify-content-center align-items-center shadow-lg rounded mr-3 m-lg-4 mb-4">
-                            <span>
-                                <span className="badge badge-light mr-1"> Q </span>
-                                CM
-                            </span>
-                            <span 
-                                className="position-absolute rounded button"
-                                data-url={ formUrl( 'qcm' ) }
-                            > commencer </span>
+                    <div className="container-fluid content-page">
+                        <div className="container-fluid p-0 d-flex flex-column justify-content-center align-items-center">
+                            <Header title={ "Exercice" } />
                         </div>
-                        <div className="exercise-option position-relative d-flex flex-column justify-content-center align-items-center shadow-lg rounded mr-3 m-lg-4 mb-4">
-                            <span>
-                                <span className="badge badge-light mr-1"> T </span>
-                                rouver les mots maquant.
-                            </span>
-                            <span 
-                                className="position-absolute rounded button"
-                                data-url={ formUrl( 'find-word' ) }
-                            > commencer </span>
-                        </div>
-                        <div className="exercise-option position-relative d-flex flex-column justify-content-center align-items-center shadow-lg rounded mr-3 m-lg-4 mb-4">
-                            <span>
-                                <span className="badge badge-light mr-1"> G </span>
-                                lisser déposer.
-                            </span>
-                            <span 
-                                className="position-absolute rounded button"
-                                data-url={ formUrl( 'drag-drop' ) }
-                            > commencer </span>
-                        </div>
-                        <div className="exercise-option position-relative d-flex flex-column justify-content-center align-items-center shadow-lg rounded mr-3 m-lg-4 mb-4">
-                            <span>
-                                <span className="badge badge-light mr-1"> M </span>
-                                ots fléchés.
-                            </span>
-                            <span 
-                                className="position-absolute rounded button"
-                                data-url={ formUrl( 'crossed-word' ) }
-                            > commencer </span>
-                        </div>
-                        <div className="exercise-option position-relative d-flex flex-column justify-content-center align-items-center shadow-lg rounded mr-3 m-lg-4 mb-4">
-                            <span>
-                                <span className="badge badge-light mr-1"> R </span>
-                                elier les cartes.
-                            </span>
-                            <span 
-                                className="position-absolute rounded button"
-                                data-url={ formUrl( 'link-card' ) }
-                            > commencer </span>
-                        </div>
-                        <div className="exercise-option position-relative d-flex flex-column justify-content-center align-items-center shadow-lg rounded mr-3 m-lg-4 mb-4">
-                            <span>
-                                <span className="badge badge-light mr-1"> C </span>
-                                hercher les mots.
-                            </span>
-                            <span 
-                                className="position-absolute rounded button"
-                                data-url={ formUrl( 'search-word' ) }
-                            > commencer </span>
+                        <div className="container-fluid p-0 py-4 d-flex flex-row justify-content-center align-items-center content-exercise-item pt-5 mb-5">
+                            <div className="exercise-option position-relative d-flex flex-column justify-content-center align-items-center shadow-lg mr-3 m-lg-4 mb-4">
+                                <span className="mb-5 container-fluid d-flex align-items-center position-relative py-5 py-lg-4">
+                                    <span className="badge mr-1 p-2 position-relative"> Q </span>
+                                    CM
+                                </span>
+                                <span 
+                                    className="position-absolute rounded button"
+                                    data-url={ formUrl( 'qcm' ) }
+                                > Commencer </span>
+                            </div>
+                            <div className="exercise-option position-relative d-flex flex-column justify-content-center align-items-center shadow-lg mr-3 m-lg-4 mb-4">
+                                <span className="mb-5 container-fluid d-flex align-items-center position-relative py-5 py-lg-4">
+                                    <span className="badge mr-1 p-2"> T </span>
+                                    rouver les mots maquant.
+                                </span>
+                                <span 
+                                    className="position-absolute rounded button"
+                                    data-url={ formUrl( 'find-word' ) }
+                                > Commencer </span>
+                            </div>
+                            <div className="exercise-option position-relative d-flex flex-column justify-content-center align-items-center shadow-lg mr-3 m-lg-4 mb-4">
+                                <span className="mb-5 container-fluid d-flex align-items-center position-relative py-5 py-lg-4">
+                                    <span className="badge mr-1 p-2"> G </span>
+                                    lisser déposer.
+                                </span>
+                                <span 
+                                    className="position-absolute rounded button"
+                                    data-url={ formUrl( 'drag-drop' ) }
+                                > Commencer </span>
+                            </div>
+                            <div className="exercise-option position-relative d-flex flex-column justify-content-center align-items-center shadow-lg mr-3 m-lg-4 mb-4">
+                                <span className="mb-5 container-fluid d-flex align-items-center position-relative py-5 py-lg-4">
+                                    <span className="badge mr-1 p-2"> M </span>
+                                    ots fléchés.
+                                </span>
+                                <span 
+                                    className="position-absolute rounded button"
+                                    data-url={ formUrl( 'crossed-word' ) }
+                                > Commencer </span>
+                            </div>
+                            <div className="exercise-option position-relative d-flex flex-column justify-content-center align-items-center shadow-lg mr-3 m-lg-4 mb-4">
+                                <span className="mb-5 container-fluid d-flex align-items-center position-relative py-5 py-lg-4">
+                                    <span className="badge mr-1 p-2"> R </span>
+                                    elier les cartes.
+                                </span>
+                                <span 
+                                    className="position-absolute rounded button"
+                                    data-url={ formUrl( 'link-card' ) }
+                                > Commencer </span>
+                            </div>
+                            <div className="exercise-option position-relative d-flex flex-column justify-content-center align-items-center shadow-lg mr-3 m-lg-4 mb-4">
+                                <span className="mb-5 container-fluid d-flex align-items-center position-relative py-5 py-lg-4">
+                                    <span className="badge mr-1 p-2"> C </span>
+                                    hercher les mots.
+                                </span>
+                                <span 
+                                    className="position-absolute rounded button"
+                                    data-url={ formUrl( 'search-word' ) }
+                                > Commencer </span>
+                            </div>
                         </div>
                     </div>
                 </div>

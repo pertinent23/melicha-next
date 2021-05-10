@@ -1,6 +1,18 @@
+.content-icon img{
+    height: 270px;
+    width: 270px;
+}
+
+.content-page{
+    min-height: 100%;
+    background-color: rgba( 255, 255, 255, 0.6 );
+    backdrop-filter: blur( 8px );
+    -webkit-backdrop-filter: blur( 8px );
+}
+
 .content-fomation-item{
     flex: 1;
-    min-height: 500px;
+    min-height: 250px;
     flex-wrap: wrap !important;
 }
 
@@ -50,7 +62,7 @@
 }
 
 .courses-title{
-    font-size: 1.8em;
+    font-size: 1.4em;
     color: var( --dark );
     font-weight: bold;
 }

@@ -1,6 +1,7 @@
 .game-infos{
     font-size: 0.9em !important;
-    background-color: var( --dark-purple );
+    font-weight: bold !important;
+    background-color: var( --shadow-purple );
 }
 
 .game-infos,
@@ -70,4 +71,61 @@
 .content-result{
     font-size: 0.9em;
     font-weight: bold;
+}
+
+.col-title{
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.prop-item{
+    font-size: 0.86em;
+}
+
+.input{
+    font-size: 0.7em;
+    outline: none;
+}
+
+.box-item{
+    width: 300px;
+    height: 200px;
+}
+
+.box-item .box-item-inner{
+    width: 260px;
+    height: 160px;
+    border: 2px dashed #DDDDDD;
+}
+
+.box-item .box-item-inner::before{
+    content: "image";
+    position: absolute;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8em;
+}
+
+.table{
+    user-select: none;
+}
+
+.content-img{
+    background-color: #FFFFFF;
+    cursor: pointer;
+    position: relative;
+    width: 256px;
+    height: 156px;
+    border: 1px dashed #DDDDDD;
+    display: flex;
+}
+
+.content-img img{
+    min-width: 100px;
+    cursor: pointer;
 }

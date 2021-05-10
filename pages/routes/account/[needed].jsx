@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import { Fragment } from 'react';
-import { useRouter } from 'next/router';
 
 import MyAccount from './my-account';
 import Inscription from './inscription-page';
@@ -9,7 +8,8 @@ import Connection from './connection-page';
 export const Contents = {
     const: {
         INSCRIPTION: 'inscription',
-        CONNECTION: 'connection'
+        CONNECTION: 'connection',
+        MODIFY: 'modify'
     },
     generate: function ( needed, data ) {
         if( needed === this.const.CONNECTION ) {
@@ -19,12 +19,28 @@ export const Contents = {
         } else {
             if (  needed === this.const.INSCRIPTION ) {
                 return this.finalyse(
-                    <Inscription />
+                    <Inscription 
+                        options={ needed } 
+                        submit={ 'Je m\'inscris' } 
+                        connection={ true } 
+                        title={ 'Inscription' }
+                    />
                 );
             } else {
-                return this.finalyse(
-                    this.generateUserPage( needed, data )
-                );
+                if ( needed === this.const.MODIFY ) {
+                    return this.finalyse(
+                        <Inscription 
+                            options={ needed } 
+                            submit={ 'Modifier' } 
+                            connection={ false } 
+                            title={ 'Modifier mon compte' }
+                        />
+                    );
+                } else {
+                    return this.finalyse(
+                        this.generateUserPage( needed, data )
+                    );
+                }
             }
         }
     },
@@ -35,7 +51,6 @@ export const Contents = {
                     pseudo={ pseudo }
                     name={ data.name }
                     surname={ data.surname }
-                    email={ data.email }
                     icon={ data.icon }
                 />
             </div>

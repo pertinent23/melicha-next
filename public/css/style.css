@@ -43,7 +43,6 @@ body {
     height: 100%;
     margin: 0px;
     padding: 0px;
-    overflow-y: hidden;
 }
 
 body {
@@ -55,7 +54,7 @@ body {
     background-color: var( --shadow-purple );
     background-image: url( "/img/menu2.jpeg" );
     background-size: 100% 100%;
-    background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 .main-column{
@@ -79,6 +78,8 @@ body {
     top: 0px;
     left: 0px;
     opacity: 0.7;
+    backdrop-filter: blur( 100px );
+    -webkit-backdrop-filter: blur( 100px );
 }
 
 .menu-column nav{
@@ -181,7 +182,8 @@ body {
 }
 
 .main-nav .active .text-center{
-    color: #000000 !important;
+    color: var( --purple ) !important;
+    font-weight: bold !important;
 }
 
 .main-nav .nav-item-content img,
@@ -190,7 +192,7 @@ body {
     letter-spacing: 0.08em;
     color: #FFFFFF;
     opacity: 0.9;
-    font-weight: 600;
+    font-weight: bold !important;
 }
 
 .search-space{
@@ -253,7 +255,7 @@ body {
 
 @media screen and ( min-width: 768 ) {
     .main-row{
-        background-size: 100% auto;
+        background-size: auto auto;
         background-position: fixed;
     }  
 

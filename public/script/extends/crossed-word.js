@@ -521,10 +521,10 @@ Utils.__init__engine = function ( list, getPuzz, __finalyse__data__ ) {
     return this;
 };
 
+$$.setStorage( 'entry', JSON.stringify( [ 'souris', 'clavier', 'ecran', 'unite centrale', 'port usb' ] ) );
 Digital( function ( $ ) {
     const entry = [];
     let
-        actions = 0,
         canvas = $( "#myCanvas" ),
         board = new Board( canvas ),
         getPuzz = function ( x, y ) {
@@ -559,7 +559,7 @@ Digital( function ( $ ) {
                 initEngine();
             return initEvent();
         };
-    $.setStorage( 'entry', JSON.stringify( [ 'souris', 'clavier', 'ecran', 'unite centrale', 'port usb' ] ) );
+
     return ( function ( $ ) {
         let data = $.getStorage( 'entry' );
             if ( data !== null ) {
