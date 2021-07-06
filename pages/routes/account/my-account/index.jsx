@@ -14,16 +14,16 @@ export default function MyAccount ( { pseudo, name, surname, icon } ) {
                 </div>
                 <div className="container position-relative d-flex flex-column px-5 py-4 infos justify-content-center">
                     <div className="container infos-item d-flex py-4 mt-3 border-bottom">
-                        <div className="infos-type d-block position-relative" id="name"> Nom: </div>
-                        <div className="infos-value d-block position-relative ml-5"> { name }  </div>
+                        <div className="infos-type d-block position-relative"> Nom: </div>
+                        <div className="infos-value d-block position-relative ml-5" id="name"> { name }  </div>
                     </div>
                     <div className="container infos-item d-flex py-4 mt-5 border-bottom">
-                        <div className="infos-type d-block position-relative" id="surname"> Prenom: </div>
-                        <div className="infos-value d-block position-relative ml-5"> { surname }  </div>
+                        <div className="infos-type d-block position-relative"> Prenom: </div>
+                        <div className="infos-value d-block position-relative ml-5" id="surname"> { surname }  </div>
                     </div>
                     <div className="container infos-item d-flex py-4 mt-5 border-bottom">
-                        <div className="infos-type d-block position-relative" id="pseudo"> Pseudo: </div>
-                        <div className="infos-value d-block position-relative ml-5"> { pseudo } </div>
+                        <div className="infos-type d-block position-relative"> Pseudo: </div>
+                        <div className="infos-value d-block position-relative ml-5" id="pseudo"> { pseudo } </div>
                     </div>
                 </div>
                 <br/>
@@ -32,6 +32,7 @@ export default function MyAccount ( { pseudo, name, surname, icon } ) {
                 </div>
                 <br/><br/>
             </div>
+            <script src="/script/extends/my.js"></script>
         </Fragment>
     );
 };

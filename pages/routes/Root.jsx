@@ -3,12 +3,12 @@ import { Fragment } from 'react';
 import { element, string } from 'prop-types';
 import Navigation from './@navigation';
 
-export const TITLE = 'Melicha leaning';
+export const TITLE = 'Learn by yourself';
 export default function Root( { children, page } ) {
     return (
         <Fragment>
             <Head>
-                <meta charset="UTF-8" />
+                <meta charSet="UTF-8" />
                 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
                 <meta name="theme-color" content="#775FD7"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -20,7 +20,11 @@ export default function Root( { children, page } ) {
                 <script src="/libs/digital-v2.0.0.min.js"></script>
                 <script src="/libs/chart.min.js"></script>
             </Head>
-            <div className="cover-container h-100 w-100 d-flex flex-column main">
+            <div className="cover-container h-100 w-100 d-flex flex-column main justify-content-center align-items-center">
+                <div className="previous-data d-flex flex-column position-absolute h-100 w-100">
+                    <span className="start d-flex w-100"></span>
+                    <div className="end d-flex w-100"></div>
+                </div>
                 <div className="container-fluid row d-flex flex-row p-0 m-0 h-100 main-row">
                     <div className="col-0 col-md-4 col-lg-3 p-0 menu-column h-auto">
                         <Navigation page={ page } />

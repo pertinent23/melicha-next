@@ -1,4 +1,5 @@
-Digital( function ( $ ) {
+const $ = Digital;
+window.draw = function ( entry ) {
     const 
         data = entry,
         labels = [ "june", "July", "August", "September", "november", "december", "january", "february", "march", "april" ],
@@ -52,4 +53,16 @@ Digital( function ( $ ) {
             }
         }
     } );
+};
+
+Digital( function () {
+    const data = Digital.getStorage( 'res' );
+    try{
+        const 
+            entry = JSON.parse( data ),
+            needed = [ 0, 0, 0, 0 ].concat( entry );
+        window.draw( needed.slice( needed.length - 4 ) );
+    } catch( e ) {
+        window.draw( [ 0, 0, 0, 0 ] );
+    }
 } );

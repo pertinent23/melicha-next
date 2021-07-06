@@ -21,7 +21,7 @@ export const Footer = ( { name } ) => (
 
 export const Canvas = () => (
     <div className="container-fluid d-flex position-relative justify-content-center py-5 mb-4">
-        <canvas id="myCanvas" width="550" height="400" className="d-block position relative border rounded"></canvas>
+        <canvas id="myCanvas" width="600" height="500" className="d-block position relative border rounded"></canvas>
     </div>
 );
 

@@ -298,6 +298,7 @@ Digital( function ( $ ) {
         entry = JSON.parse( data || { } );
         Utils.__init__( entry );
     return $( '#next-button' ).click( function () {
+        addFinal( Utils.result ? 5 : 0, 5 );
         $( '.content-result' ).text( Utils.result ? 'Objectif atteint' : 'Objectif manqué' );
         const node = $( this );
                 node.removeClass( 'verify' );
@@ -308,6 +309,7 @@ Digital( function ( $ ) {
                 * du serveur. 
                 * pour les statistique
             */
+            move();
         } );
     } );
 } );

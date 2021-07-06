@@ -41,7 +41,7 @@ export const Pile = {
                     
                     this.list.push( 
                         <li 
-                            className={ "nav-item container-fluid mt-4 d-flex flex-column align-items-start justify-content-start justify-content-start justify-content-lg-center align-items-lg-center".concat( final ) } 
+                            className={ "nav-item container-fluid mt-3 d-flex flex-column align-items-start justify-content-start justify-content-start justify-content-lg-center align-items-lg-center".concat( final ) } 
                             key={ data.id }
                         >
                             <Link href={ data.href }>
@@ -64,12 +64,12 @@ export default function Navigation ( { page } ) {
         <nav className="navbar navbar-expand-md flex-md-column container-fluid main-nav d-flex justify-content-between justify-content-md-start align-items-center pl-0" role="navigation">
             <div className="navbar-brand nav-head d-flex justify-content-center align-items-center mt-md-3 ml-3 ml-md-0">
                 <img src="/img/icon.svg" alt="" className="img" height="50" width="50" />
-                <span className="d-flex h-100"> Melicha-leaning </span>
+                <span className="d-flex h-100"> CMApp </span>
             </div>
             <button className="navbar-toggler d-flex d-md-none flex-column justify-content-center p-0" type="button" data-toggle="collapse" data-target="#navbar-items-container" arial-control="navbarNav" arial-expanded="false" arial-label="toggle navigation">
                 <span className="navbar-toggler-icon d-block position-relative"></span>
             </button>
-            <div className="collapse navbar-collapse position-relative flex-column py-5 justify-content-start w-100" id="navbar-items-container">
+            <div className="collapse navbar-collapse position-relative flex-column py-0 justify-content-start w-100" id="navbar-items-container">
                 <ul className="navbar-nav p-0 m-0 py-5 container-fluid d-flex flex-column justify-content-start">
                     { Pile.run( page ) }
                 </ul>
@@ -82,26 +82,36 @@ Pile.addAll( {
     home: {
         img: "dashboard",
         href: "/",
-        content: "Dashboard"
-    },
-    formation: {
-        img: "formations",
-        href: "/routes/formation",
-        content: "Formation"
+        content: "Tableau de control"
     },
     courses: {
         img: "myClass",
-        href: "/routes/courses/all",
-        content: "Mes cours"
+        href: "/routes/courses/prerequis",
+        content: "Tous Mes cours"
+    },
+    simulation: {
+        img: "simulation",
+        href: "/routes/simulation/index",
+        content: "Simulation"
     },
     exercise: {
-        img: "game",
+        img: "exercise",
         href: "/routes/exercise/index",
-        content: "Exercice"
+        content: "Exercise"
+    },
+    game: {
+        img: "game",
+        href: "/routes/game/index",
+        content: "Jeux"
+    },
+    lexique: {
+        img: "formations",
+        href: "/routes/lexique",
+        content: "Lexique"
     },
     account: {
         img: "account",
         href: "/routes/account/@user",
         content: "Mon compte"
-    }
+    },
 } );

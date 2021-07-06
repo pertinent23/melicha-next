@@ -2,43 +2,8 @@ import Head from 'next/head';
 import { Fragment } from 'react';
 import Header from './routes/@header';
 
-export const Contents = {
-    generate: function ( list ) {
-        let i = 0;
-        const result = [ ];
-            for( const item of list ) {
-                if ( i < 2 ) {
-                    result.push( 
-                        this.getItem( item )
-                    );
-                } else
-                    break;
-                i++;
-            }
-        return result;
-    },
-    getItem: function ( __formation__ ) {
-        return (
-            <div className="container formation-item d-flex flex-column justify-content-around align-items-center px-4 mt-2 unstart" key={ __formation__.name }>
-                <span className="line_1 d-flex position-relative container-fluid justify-content-between align-items-center m-0 p-0">
-                    <span className="badge d-flex justify-content-center align-items-center">
-                        { __formation__.name[ 0 ] }
-                    </span>
-                    <span className="text"> { __formation__.name } </span>
-                </span>
-                <span className="line_2 d-flex position-relative container-fluid justify-content-end align-items-center m-0 p-0 px-3 description">
-                    { __formation__.description }
-                </span>
-                <span className="line_3 d-flex position-relative container-fluid justify-content-end align-items-center m-0 p-0">
-                    <button className="btn px-3" data-name={ __formation__.name }> aller </button>
-                </span>
-            </div>
-        );
-    }
-};
-
 export const page = 'home';
-export default function Home( { list, progression } ) {
+export default function Home( { progression } ) {
     return (
         <Fragment>
             <Head>
@@ -57,7 +22,7 @@ export default function Home( { list, progression } ) {
                         <Header title={ "Bienvenue !! " } />
                     </div>
                     <div className="container-fluid row p-0 m-0 py-3">
-                        <div className="container text-left mt-4"> Dashboard </div>
+                        <div className="container text-left mt-4"> Tableau de control </div>
                     </div>
                     <div className="container-fluid row p-0 py-3 m-0 d-flex align-items-center banner rounded">
                         <div className="col col-lg-6 container-fluid p-0 m-0">
@@ -115,11 +80,21 @@ export default function Home( { list, progression } ) {
                     <div className="container-fluid row p-0 m-0 py-3 mb-5">
                         <div className="col col-lg-6 container-fluid p-0 m-0">
                             <div className="container py-3">
-                                <div className="dashboard-title text-dark"> Formation </div>
+                                <div className="dashboard-title text-dark"> Description </div>
                             </div>
                             <div className="container rounded">
                                 <div className="container rounded formation-container py-3 px-0">
-                                    { Contents.generate( list ) }
+                                    <div className="container formation-item d-flex flex-column justify-content-around align-items-center px-4 mt-2 unstart">
+                                        <span className="line_1 d-flex position-relative container-fluid justify-content-start align-items-center m-0 p-0">
+                                            <span className="badge d-flex justify-content-center align-items-center px-2">
+                                                MCa
+                                            </span>
+                                            <span className="text text-left pl-4"> Manipulation computing Application </span>
+                                        </span>
+                                        <span className="line_2 d-flex position-relative container-fluid justify-content-end align-items-center m-0 p-0 px-3 description">
+                                            ici on va mettre une courte description de notre site
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -153,22 +128,10 @@ Home.scripts = [
 ];
 
 export async function getServerSideProps() {
-    const
-        progress = [ 0, 100, 35, 150 ],
-        result = [ ];
-        result.push( {
-            name: 'Hardware',
-            description: 'Une petite description de la formation et des éléments qui s\'y raportent.'
-        } );
-
-        result.push( {
-            name: 'Software',
-            description: 'Une petite description de la formation et des éléments qui s\'y raportent.'
-        } );
+    const progress = [ 0, 100, 35, 150 ];
     return {
         props: {
-            progression: progress,
-            list: result
+            progression: progress
         }
     }  
 };

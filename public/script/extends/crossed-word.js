@@ -542,6 +542,7 @@ Digital( function ( $ ) {
         initEvent = function () {
             return $( "#next-button" ).click( function () {
                 Utils.verify();
+                addFinal( Utils.result, 5 );
                 $( '.content-result' ).text( 'Resultat: '.concat( '' + Utils.result  ).concat( '/5' ) );
                 const node = $( this );
                         node.removeClass( 'verify' );
@@ -552,6 +553,7 @@ Digital( function ( $ ) {
                         * du serveur. 
                         * pour les statistique
                     */
+                    move();
                 } );
             } );  
         },

@@ -1,0 +1,169 @@
+.title-text{
+    font-size: 1.3em;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+}
+
+.content-field input,
+.content-field select,
+.content-field textarea{
+    padding: 15px 45px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #DDDDDD;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 5px #DDDDDD;
+    font-size: 0.8em;
+}
+
+.content-field select{
+    min-width: 200px;
+}
+
+.form-error{
+    font-size: 0.86em;
+}
+
+.content-submit #submit{
+    padding: 10px 45px;
+    font-size: 0.9em;
+    color: #FFFFFF;
+    background-color: var( --shadow-purple );
+    outline: none;
+    border: 0px;
+    border-radius: 3px;
+}
+
+.nav{
+    height: 60px;
+    background-color: #FFFFFF;
+}
+
+.nav .nav-icon{
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    transform: scale( 0.75em );
+}
+
+.nav .nav-icon .items{
+    display: block;
+    position: relative;
+    height: 3px;
+    width: 25px;
+    background-color: #000000;
+    border-radius: 3px;
+    bottom: 5px;
+    transform: rotate( -33.5deg );
+}
+
+.nav .nav-icon .item2{
+    top: 5px;
+    transform: rotate( 33.5deg );
+}
+
+.nav .nav-text{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.content-home-items{
+    flex-wrap: wrap;
+}
+
+.home-item{
+    width: 90%;
+    max-width: 370px;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    min-height: 400px;
+}
+
+.home-item .home-item-title{
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.home-item .home-item-text{
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+.home-item .home-item-content{
+    flex: 1;
+    width: 100%;
+}
+
+.home-item .home-item-icon{
+    height: 60px;
+    width: 60px;
+    background-color: var( --purple );
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.home-item .home-item-icon .items{
+    width: 30px;
+    height: 4px;
+    border-radius: 6px;
+    background-color: #FFFFFF;
+}
+
+.home-item .home-item-icon .item2{
+    transform: rotate( 90deg );
+}
+
+.list-group-item:hover,
+.list-group-item{
+    text-decoration: none;
+    color: #000000;
+}
+
+.game-items{
+    font-size: 0.9em;
+}
+
+#back-button{
+    font-size: 0.9em;
+    color: #FFFFFF;
+    font-weight: 600;
+    background-color: var( --dark );
+}
+
+.content-img{
+    height: 75px;
+    width: 75px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.content-img img{
+    height: 100%;
+    width: 100%;
+}
+
+.focused-items{
+    min-height: 50px;
+}
+
+.focused-items input{
+    height: 100%;
+    border: none;
+    outline: none;
+}
+
+.focused-items input:nth-child( 1 ) {
+    flex: 1;
+    border-right: 1px solid #DDDDDD;
+}
+
+.focused-items select{
+    outline: none;
+    background-color: #FFFFFF;
+    border: none;
+}
+
+.choice select{
+    outline: none !important;
+    background-color: #FFFFFF;
+    border: 1px solid #DDDDDD;
+}

@@ -95,11 +95,13 @@ Digital( function ( $ ) {
         Utils.__init__( entry );
     return $( '#next-button' ).click( function () {
         Utils.result = Utils.__verify__();
+        addFinal( Utils.result, 5 );
         $( '.content-result' ).text( 'Resultat: '.concat( '' + Utils.result  ).concat( '/5' ) );
         const node = $( this );
                 node.removeClass( 'verify' );
             node.text( 'Suivant' );
         return node.click( function () {
+            move();
             /** 
                 * Envoyer les données au niveau
                 * du serveur. 

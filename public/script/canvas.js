@@ -205,16 +205,16 @@
                                 y = obj.getSizeY( e.offsetY ),
                                 list = obj.getPortions(), item;
                                     for( item of list ) 
-                                        obj.verify( item, x, y, e.type );
+                                        obj.verify( item, x, y, e.type, e );
                             return this;
                         } );
                     }
                 return this;
             },
-            verify: async function ( item, x, y, eventn ) {
+            verify: async function ( item, x, y, eventn, __event__object__ ) {
                 if( item.implement( eventn ) ) {
                     if ( item.maches( x, y ) )
-                        return item.dispach( eventn );
+                        return item.dispach( eventn, __event__object__ );
                 }
             },
             addEvent: function ( event ) {
@@ -258,8 +258,8 @@
                         this.getBoard().addListenerFor( event );
                 return this;
             },
-            dispach: function ( event ) {
-                return this.implemented[ event ].call( this, { } );
+            dispach: function ( event, __obj__ ) {
+                return this.implemented[ event ].call( this, __obj__ );
             },
             getContext: function () {
                 return this.getBoard().getContext();

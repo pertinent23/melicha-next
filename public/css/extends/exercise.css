@@ -93,12 +93,12 @@
     background-color: var( --dark-purple );
 }
 
-.exercise-option:nth-child( 4n ) {
+.exercise-option:nth-child( 2n ) {
     border-color: var( --pink );
 }
 
-.exercise-option:nth-child( 4n ) .badge,
-.exercise-option:nth-child( 4n ) .button{
+.exercise-option:nth-child( 2n ) .badge,
+.exercise-option:nth-child( 2n ) .button{
     background-color: var( --pink );
 }
 

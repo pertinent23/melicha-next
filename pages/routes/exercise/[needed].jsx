@@ -63,42 +63,12 @@ export const Contents = {
                             </div>
                             <div className="exercise-option position-relative d-flex flex-column justify-content-center align-items-center shadow-lg mr-3 m-lg-4 mb-4">
                                 <span className="mb-5 container-fluid d-flex align-items-center position-relative py-5 py-lg-4">
-                                    <span className="badge mr-1 p-2"> G </span>
-                                    lisser déposer.
-                                </span>
-                                <span 
-                                    className="position-absolute rounded button"
-                                    data-url={ formUrl( 'drag-drop' ) }
-                                > Commencer </span>
-                            </div>
-                            <div className="exercise-option position-relative d-flex flex-column justify-content-center align-items-center shadow-lg mr-3 m-lg-4 mb-4">
-                                <span className="mb-5 container-fluid d-flex align-items-center position-relative py-5 py-lg-4">
-                                    <span className="badge mr-1 p-2"> M </span>
-                                    ots fléchés.
-                                </span>
-                                <span 
-                                    className="position-absolute rounded button"
-                                    data-url={ formUrl( 'crossed-word' ) }
-                                > Commencer </span>
-                            </div>
-                            <div className="exercise-option position-relative d-flex flex-column justify-content-center align-items-center shadow-lg mr-3 m-lg-4 mb-4">
-                                <span className="mb-5 container-fluid d-flex align-items-center position-relative py-5 py-lg-4">
-                                    <span className="badge mr-1 p-2"> R </span>
-                                    elier les cartes.
+                                    <span className="badge mr-1 p-2"> C </span>
+                                    lasser les cartes.
                                 </span>
                                 <span 
                                     className="position-absolute rounded button"
                                     data-url={ formUrl( 'link-card' ) }
-                                > Commencer </span>
-                            </div>
-                            <div className="exercise-option position-relative d-flex flex-column justify-content-center align-items-center shadow-lg mr-3 m-lg-4 mb-4">
-                                <span className="mb-5 container-fluid d-flex align-items-center position-relative py-5 py-lg-4">
-                                    <span className="badge mr-1 p-2"> C </span>
-                                    hercher les mots.
-                                </span>
-                                <span 
-                                    className="position-absolute rounded button"
-                                    data-url={ formUrl( 'search-word' ) }
                                 > Commencer </span>
                             </div>
                         </div>

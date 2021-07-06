@@ -96,18 +96,14 @@ Digital( function ( $ ) {
                                     * now we can send data
                                     * to the server 
                                 */
-                                const options = $( '[data-options]' ).attr( 'data-options' );
-                                    if ( options === 'inscription' ) {
-                                        /** 
+                                    /** 
                                             * Here we can send 
                                             * information for inscription 
                                         */
-                                    } else {
-                                        /** 
-                                            * Here we can update 
-                                            * use information 
-                                        */
-                                    }
+                                     Digital.setStorage( 'user', JSON.stringify(
+                                        Storage
+                                    ) );
+                                    window.location = '/';
                                 return Error.empty();
                             } else {
                                 Error.add( result );
@@ -121,7 +117,18 @@ Digital( function ( $ ) {
                                     * now we can send data
                                     * to the server 
                                 */
-                                 return Error.empty();
+                                try {
+                                    const data = JSON.parse(
+                                        Digital.getStorage( 'user' )
+                                    );
+
+                                    if ( Storage.pseudo === data.pseudo && Storage.password === data.password ) {
+                                        window.location = '/';
+                                    } else {
+                                        Error.add( 'Compte non trouvé' );
+                                    }
+                                } catch( e ) { }
+                                return Error.empty();
                             } else {
                                 Error.add( result );
                             }

@@ -16,20 +16,17 @@
     flex-wrap: wrap !important;
 }
 
+video{
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+}
+
 .formation-option{
     width: 350px;
     height: 220px;
     border: 2px dashed #DDDDDD;
-}
-
-.formation-option:nth-child( 2n + 1 ) {
-    background-color: var( --dark-purple );
-    border: none;
-}
-
-.formation-option:nth-child( 2n ) {
-    background-color: var( --pink );
-    border: none;
+    background-color: rgba( 255, 255, 255, 0.8 );
 }
 
 .formation-option .item-title{
@@ -47,9 +44,9 @@
 }
 
 .formation-option .item-text{
-    color: #FFFFFF;
+    color: #000000;
     font-weight: rgba( 255, 255, 255, 0.8 );
-    font-size: 0.95em;
+    font-size: 0.85em;
 }
 
 .formation-option .btn:focus,
@@ -61,8 +58,73 @@
     box-shadow: none;
 }
 
+.formation-option:nth-child( 2n + 1 ) {
+    border: none;
+    border-bottom: 4px solid var( --dark-purple );
+}
+
+.formation-option:nth-child( 2n + 1 ) .item-title{
+    color: var( --dark-purple );
+}
+
+.formation-option:nth-child( 2n + 1 ) .item-icon,
+.formation-option:nth-child( 2n + 1 ) .btn,
+.formation-option:nth-child( 2n + 1 ) .btn:focus{
+    background-color: var( --dark-purple );
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+.formation-option:nth-child( 2n ) {
+    border: none;
+    border-bottom: 4px solid var( --pink );
+}
+
+
+.formation-option:nth-child( 2n ) .item-title{
+    color: var( --pink );
+}
+
+.formation-option:nth-child( 2n ) .item-icon,
+.formation-option:nth-child( 2n ) .btn,
+.formation-option:nth-child( 2n ) .btn:focus{
+    background-color: var( --pink );
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
 .courses-title{
     font-size: 1.4em;
     color: var( --dark );
     font-weight: bold;
+}
+
+.prerequis{
+    border-left: 3px solid var( --purple );
+    background-color: rgba( 255, 255, 255, 0.6 );
+}
+
+.prerequis .start{
+    font-size: 1.2em;
+    font-weight: 600;
+    color: var( --purple );
+}
+
+.prerequis .list-group-item{
+    background-color: transparent;
+    font-size: 0.92em;
+}
+
+.prerequis .verify{
+    background-color: var( --purple );
+    font-size: 0.9em;
+    font-weight: 600;
+    color: #FFFFFF;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.content-question-answer{
+    font-size: 0.85em;
+    font-weight: 600;
 }

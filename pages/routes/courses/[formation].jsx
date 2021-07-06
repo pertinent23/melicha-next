@@ -67,12 +67,16 @@ export async function getServerSideProps( context ) {
         result = [ ], 
         { formation } = context.query;
             result.push( {
-                name: 'Cour 1',
-                description: 'Une courte description du cour.'
+                name: 'Fonctionnement de l\'ordinateur',
+                description: "dans cette leçon à nature théorique nous présenterons le schéma de fonctionnement de l'ordinateur, les types de périphériques et les composants de l'unité centrale."
             } );
             result.push( {
-                name: 'Cour 2',
-                description: 'Une courte description du cour.'
+                name: "TP 1",
+                description: "Dans cette leçon à nature pratique nous apprendrons à déconnecter le matériel, le transporter et le reconnecter avec succès."
+            } );
+            result.push( {
+                name: "TP 2",
+                description: "Dans cette dernière leçon de la séquence il sera question d'apprendre à allumer et éteindre l'ordinateur , utiliser les supports et enfin conserver le matériel informatiqu."
             } ); 
     return {
         props: {
