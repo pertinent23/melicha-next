@@ -1,4 +1,7 @@
-$$.setStorage( 'entry', JSON.stringify( [ 'souris', 'clavier', 'ecran', 'moniteur', 'usb' ] ) );
+$$.setStorage( 'entry', JSON.stringify( [
+    [ 'souris', 'clavier', 'ecran', 'moniteur', 'usb' ],
+    [ 'sata', 'ram', 'moniteur', 'clavier', 'routeur' ]
+] ) );
 const 
     __base__key__ = 'abcdefghidk',
     __item__keys__ = __base__key__.toUpperCase().split( '' ),
@@ -329,7 +332,7 @@ Digital( function ( $ ) {
     return ( function ( $ ) {
         let data = $.getStorage( 'entry' );
             if ( data !== null ) {
-                const __arr__ = JSON.parse( data );
+                const __arr__ = JSON.parse( data )[ randIn( 1, 2 ) - 1 ];
                     for( const item of __arr__ )
                         entry.push( item );
                     init();

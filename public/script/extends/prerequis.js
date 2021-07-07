@@ -3,10 +3,10 @@ Digital( function ( $ ) {
     const answer = [ 'r1', 'r2', 'r3', 'r4' ];
     const data = [];
     const questions = {
-        "premiere question": true,
-        "dexieme question": false,
-        "trosieme question": true,
-        "quatrieme question": true
+        "l’ordinateur est composé uniquement des composants de base ": false,
+        "le port jack est encore appelé port audio": true,
+        "e port VGA sert à connecter un écran à la carte graphique ": true,
+        "l’unité centrale contient les éléments externes de l’ordinateur ": false
     };
 
     let i = 0;

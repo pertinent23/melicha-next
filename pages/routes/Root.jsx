@@ -4,6 +4,7 @@ import { element, string } from 'prop-types';
 import Navigation from './@navigation';
 
 export const TITLE = 'Learn by yourself';
+/** @param {import('next').InferGetServerSidePropsType<typeof getServerSideProps> } props */
 export default function Root( { children, page } ) {
     return (
         <Fragment>
@@ -15,6 +16,7 @@ export default function Root( { children, page } ) {
                 <link rel="stylesheet" type="text/css" href="/libs/bootstrap.min.css" />
                 <link rel="stylesheet" type="text/css" href="/css/style.css" />
                 <title> { TITLE } </title>
+                <link rel="icon" href="/img/sicon.png" type="image/png" />
                 <script src="/libs/jquery-3.3.1.slim.min.js"></script>
                 <script src="/libs/popper.min.js"></script>
                 <script src="/libs/digital-v2.0.0.min.js"></script>
@@ -39,6 +41,7 @@ export default function Root( { children, page } ) {
             </div>
             <script src="/libs/bootstrap.bundle.min.js"></script>
             <script src="/script/main.js"></script>
+            <script src="/script/randIn.js"></script>
             <script src="/script/tools.js"></script>
         </Fragment>
     );

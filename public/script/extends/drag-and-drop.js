@@ -1,12 +1,23 @@
-$$.setStorage( "entry", JSON.stringify( {
-    word: 'manettes',
-    imgs: {
-        '/img/game.svg': true,
-        '/img/myClass.svg': false,
-        '/img/formations.svg': false,
-        '/img/account.svg': false
+$$.setStorage( "entry", JSON.stringify( [
+    {
+        word: "Permet de connecter l'écran à l'unité centrale",
+        imgs: {
+            '/img/game/Rj45 connectuer.png': false,
+            '/img/game/connecteur_hdmi.png': false,
+            '/img/game/connecteur_vga.png': true,
+            '/img/game/usb_typeC.png': false
+        }
+    },
+    {
+        word: "n'est pas un périphérique de sortie.",
+        imgs: {
+            '/img/game/Baffle_Jbl_jack.png': false,
+            '/img/game/casque_jack2.png': false,
+            '/img/game/Sd Card connectuer.png': true,
+            '/img/game/souris.png': true
+        }
     }
-} ) );
+] ) );
 
 
 const 
@@ -295,7 +306,7 @@ Utils.__init__ = function ( entry ) {
 Digital( function ( $ ) {
     const
         data = $.getStorage( 'entry' ),
-        entry = JSON.parse( data || { } );
+        entry = JSON.parse( data || { } )[ randIn( 1, 2 ) - 1 ];
         Utils.__init__( entry );
     return $( '#next-button' ).click( function () {
         addFinal( Utils.result ? 5 : 0, 5 );

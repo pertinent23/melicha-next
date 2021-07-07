@@ -1,7 +1,19 @@
 const $ = Digital;
 $$.setStorage( 'entry', JSON.stringify( {
-    sorted: [ 'data1', 'data2', 'data3', 'data4', 'data5' ],
-    data: [ 'data1', 'data5', 'data3', 'data4', 'data2' ]
+    sorted: [ 
+        'Brancher l\'ordinateur sur une prise électrique.', 
+        'Allumer l\'unité centrale', 
+        'Allumer l\'unité l\'écran', 
+        'Se connecter à sa séssion', 
+        'Lancer l\'arrete de l\'ordinateur' 
+    ],
+    data: [ 
+        'Brancher l\'ordinateur sur une prise électrique.', 
+        'Lancer l\'arrete de l\'ordinateur', 
+        'Allumer l\'unité l\'écran', 
+        'Se connecter à sa séssion', 
+        'Allumer l\'unité centrale' 
+    ]
 } ) );
 
 Utils.result = 0;

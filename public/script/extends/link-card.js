@@ -1,10 +1,17 @@
 const $ = Digital;
 $$.setStorage( 'entry', JSON.stringify( {
     matching: {
-        'paralelle': 'port',
-        'usb': '/img/img4.jpg'
+        'VGA': '/img/game/div_connecteur.png',
+        'HDMI': '/img/game/connecteur_hdmi.png',
+        'RJ45': '/img/game/Rj45 connectuer.png',
+        'USB': '/img/game/connecteur_usb3.png',
     },
-    list: [ 'paralelle', 'usb', 'port', '/img/img4.jpg' ]
+    list: [ 
+        '/img/game/connecteur_usb3.png', 'VGA', 
+        '/img/game/Rj45 connectuer.png', 'HDMI',
+        '/img/game/connecteur_hdmi.png', 'USB',
+        'RJ45', '/img/game/div_connecteur.png' 
+    ]
 } ) );
 
 Utils.result = 0;
@@ -36,14 +43,21 @@ Utils.__init__engine = function ( entry ) {
                 return node.click( function () {
                     data = node.attr( 'data-w' );
                     if ( Storage.active ) {
-                        console.log( matching );
                         for( let key in matching ) {
                             const res = matching[ key ];
                             if ( ( key === data && res === Storage.data ) || ( res === data && key === Storage.data ) ) {
-                                            Storage.node.remove();
-                                        node.remove();
+                                        //    Storage.node.remove();
+                                        //node.remove();
+                                        function handle( e ) {
+                                            return e;
+                                        };
+                                        Storage.node.click( handle );
+                                        node.click( handle );
                                     Utils.result++;
-                                break;
+                                    Storage.node.replaceClass( 'orange', 'green' );
+                                    node.addClass( 'green' );
+                                    Storage.active = false;
+                                return;
                             }
                         }
                             Storage.node.replaceClass( 'orange', 'red' );
