@@ -3,7 +3,7 @@ import { Fragment } from 'react';
 import { element, string } from 'prop-types';
 import Navigation from './@navigation';
 
-export const TITLE = 'Learn by yourself';
+export const TITLE = 'Computer Manipulating App';
 /** @param {import('next').InferGetServerSidePropsType<typeof getServerSideProps> } props */
 export default function Root( { children, page } ) {
     return (
