@@ -10,7 +10,7 @@ export default function FindWord ( ) {
                 <script src="/script/canvas.js"></script>
                 <link rel="stylesheet" href="/css/game.css"/>
             </Head>
-            <div className="container-fluid main-container position-relative h-100 d-none">
+            <div className="container-fluid main-container position-relative h-100 d-none px-0">
                 <GameBody
                     canvas={ false }
                     title="Trouver le mot"

@@ -13,8 +13,8 @@ export const Footer = ( { name } ) => (
         <div className="container-fluid d-flex position-relative justify-content-start pl-5 pb-4">
             <span className="content-result"></span>
         </div>
-        <div className="container-fluid content-next-button d-flex position-relative justify-content-end pb-2 pt-5">
-            <button id="next-button" className="verify"> { name } </button>
+        <div className="container-fluid content-next-button d-flex position-relative justify-content-center pt-0 pt-md-5 pb-5">
+            <button id="next-button" className="verify px-5 py-3 mt-md-3"> { name } </button>
         </div>
     </Fragment>
 );
@@ -30,8 +30,8 @@ export const GameBody = ( { children, name, title, gameInfos, canvas } ) => (
         <div className="container-fluid p-0 d-flex flex-column justify-content-center align-items-center">
             <Header title={ title } />
         </div>
-        <div className="container-fluid p-0 d-flex flex-column justify-content-center align-items-center content-exercise-item pt-5 pb-4 mb-5">
-            <div className="container-fluid">
+        <div className="container-fluid p-0 d-flex flex-column justify-content-center align-items-center content-exercise-item pt-5 pb-4 mb-5 px-0 px-sm-2 px-md-3">
+            <div className="container-fluid px-1 px-sm-2 px-md-3">
                 <GameInfos>
                     { gameInfos() }
                 </GameInfos>

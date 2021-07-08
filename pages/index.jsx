@@ -17,7 +17,7 @@ export default function Home( { progression } ) {
                 <div className="content-icon h-100 w-100 position-absolute d-flex justify-content-center align-items-center">
                     <img src="/img/banner-img2.svg" alt="icon" className="position-relative img img-responsive"/>
                 </div>
-                <div className="container-fluid content-page">
+                <div className="container-fluid content-page px-0">
                     <div className="container-fluid p-0 d-flex flex-column justify-content-center align-items-center">
                         <Header title={ "Bienvenue !! " } />
                     </div>
@@ -82,17 +82,17 @@ export default function Home( { progression } ) {
                             <div className="container py-3">
                                 <div className="dashboard-title text-dark"> Description </div>
                             </div>
-                            <div className="container rounded">
+                            <div className="container-fluid px-1 px-sm-2 px-md-3 rounded">
                                 <div className="container rounded formation-container py-3 px-0">
-                                    <div className="container formation-item d-flex flex-column justify-content-around align-items-center px-4 mt-2 unstart">
-                                        <span className="line_1 d-flex position-relative container-fluid justify-content-start align-items-center m-0 p-0">
+                                    <div className="container formation-item d-flex flex-column justify-content-around align-items-center px-0 mt-2 unstart">
+                                        <span className="line_1 d-flex position-relative container-fluid justify-content-start align-items-center m-0 py-0 px-2 pl-3">
                                             <span className="badge d-flex justify-content-center align-items-center px-2">
                                                 MCa
                                             </span>
                                             <span className="text text-left pl-4"> Manipulation computing Application </span>
                                         </span>
-                                        <span className="line_2 d-flex position-relative container-fluid justify-content-end align-items-center m-0 p-0 px-3 description">
-                                            ici on va mettre une courte description de notre site
+                                        <span className="line_2 d-flex position-relative container-fluid justify-content-end align-items-center m-0 pb-3 pl-4 pr-3 description">
+                                        MCapp est un outil d'aide à l'apprentissage pour les élèves en classe de 6 ème portant sur la séquence d'enseignement : Manipulation des ordinateurs
                                         </span>
                                     </div>
                                 </div>

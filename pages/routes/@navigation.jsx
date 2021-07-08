@@ -64,7 +64,7 @@ export default function Navigation ( { page } ) {
         <nav className="navbar navbar-expand-md flex-md-column container-fluid main-nav d-flex justify-content-between justify-content-md-start align-items-center pl-0" role="navigation">
             <div className="navbar-brand nav-head d-flex justify-content-center align-items-center mt-md-3 ml-3 ml-md-0">
                 <img src="/img/sicon.png" alt="" className="img" height="60" width="70" />
-                <span className="d-flex h-100"> CMApp </span>
+                <span className="d-flex h-100"> MCApp </span>
             </div>
             <button className="navbar-toggler d-flex d-md-none flex-column justify-content-center p-0" type="button" data-toggle="collapse" data-target="#navbar-items-container" arial-control="navbarNav" arial-expanded="false" arial-label="toggle navigation">
                 <span className="navbar-toggler-icon d-block position-relative"></span>

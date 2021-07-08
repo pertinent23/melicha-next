@@ -10,7 +10,7 @@ export default function QCM () {
                 <script src="/script/canvas.js"></script>
                 <link rel="stylesheet" href="/css/game.css"/>
             </Head>
-            <div className="container-fluid main-container position-relative h-100 d-none">
+            <div className="container-fluid main-container position-relative h-100 d-none px-0">
                 <GameBody
                     canvas={ false }
                     title="QCM"
@@ -26,19 +26,23 @@ export default function QCM () {
                         );
                     } }
                 >
-                    <div className="container-fluid list-group table my-5 mx-0 px-3 border rounded">
+                    <div className="container-fluid list-group table my-5 mx-0 px-2 px-sm-2 px-md-3 border rounded">
                         <div className="row py-4">
                             <div className="col-9 col-title"> Questions: </div>
                             <div className="col-3">
                                 <div className="row">
-                                    <div className="col-6 col-title"> Vrai </div>
-                                    <div className="col-6 col-title"> Faux </div>
+                                    <div className="col-6 col-title">
+                                        V<span className="d-none d-sm-inline-block">rai</span>
+                                    </div>
+                                    <div className="col-6 col-title">
+                                        F<span className="d-none d-sm-inline-block">aux</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div className="row d-flex flex-row align-items-center border-top pb-2">
                             <div className="col-9">
-                                <div className="list-group-item main-list-item border-0 py-3 prop-item" data-result="q-1"> 1. </div>
+                                <div className="list-group-item main-list-item border-0 py-3 prop-item px-0 px-sm-2" data-result="q-1"> 1. </div>
                             </div>
                             <div className="col-3 border-left h-100">
                                 <div className="row">
@@ -53,7 +57,7 @@ export default function QCM () {
                         </div>
                         <div className="row d-flex flex-row align-items-center border-top pb-2">
                             <div className="col-9">
-                                <div className="list-group-item main-list-item border-0 py-3 prop-item" data-result="q-2"> 2. </div>
+                                <div className="list-group-item main-list-item border-0 py-3 prop-item px-0 px-sm-2" data-result="q-2"> 2. </div>
                             </div>
                             <div className="col-3 border-left h-100">
                                 <div className="row">
@@ -68,7 +72,7 @@ export default function QCM () {
                         </div>
                         <div className="row d-flex flex-row align-items-center border-top pb-2">
                             <div className="col-9">
-                                <div className="list-group-item main-list-item border-0 py-3 prop-item" data-result="q-3"> 3. </div>
+                                <div className="list-group-item main-list-item border-0 py-3 prop-item px-0 px-sm-2" data-result="q-3"> 3. </div>
                             </div>
                             <div className="col-3 border-left h-100">
                                 <div className="row">
@@ -83,7 +87,7 @@ export default function QCM () {
                         </div>
                         <div className="row d-flex flex-row align-items-center border-top pb-2">
                             <div className="col-9">
-                                <div className="list-group-item main-list-item border-0 py-3 prop-item" data-result="q-4"> 4. </div>
+                                <div className="list-group-item main-list-item border-0 py-3 prop-item px-0 px-sm-2" data-result="q-4"> 4. </div>
                             </div>
                             <div className="col-3 border-left h-100">
                                 <div className="row">
@@ -98,7 +102,7 @@ export default function QCM () {
                         </div>
                         <div className="row d-flex flex-row align-items-center border-top pb-2">
                             <div className="col-9">
-                                <div className="list-group-item main-list-item border-0 py-3 prop-item" data-result="q-5"> 5. </div>
+                                <div className="list-group-item main-list-item border-0 py-3 prop-item px-0 px-sm-2" data-result="q-5"> 5. </div>
                             </div>
                             <div className="col-3 border-left h-100">
                                 <div className="row">
