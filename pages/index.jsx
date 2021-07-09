@@ -115,6 +115,10 @@ export default function Home( { progression } ) {
                             </div>
                         </div>
                     </div>
+                    <div className="container-fluid d-flex justify-content-center align-items-center pb-5 pt-2">
+                        <img src="/img/logo/ENS-removebg-preview.png" alt="icon" width="60" height="70" className="img" />
+                        <span style={{fontWeight: 600, fontSize: "0.9em"}}> KOUGOUM MBEFOYO Melicha (DITE) </span>
+                    </div>
                 </div>
             </div>
         </Fragment>
