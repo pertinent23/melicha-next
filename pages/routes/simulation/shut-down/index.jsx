@@ -11,22 +11,6 @@ export default function ShutDown ( ) {
                 <link rel="stylesheet" href="/css/game.css"/>
             </Head>
             <div className="container-fluid main-container position-relative h-100 d-none">
-                <div className="container-fluid api api-items p-0">
-                    <div className="container-fluid d-flex position-relative justify-content-center align-items-center p-0">
-                        <div className="d-flex position-relative flex-column api-list border rounded">
-                            <div className="container-fluid border-bottom mb-2 py-4 api-title">
-                                Choisir une option
-                            </div>
-                            <div className="container-fluid list-group px-3 pb-3">
-                                <div className="list-group-item api-list-item border-left-0 border-right-0 py-2 pt-4 border-top-0"> 1. </div>
-                                <div className="list-group-item api-list-item border-left-0 border-right-0 py-2 pt-4"> 2. </div>
-                                <div className="list-group-item api-list-item border-left-0 border-right-0 py-2 pt-4"> 3. </div>
-                                <div className="list-group-item api-list-item border-left-0 border-right-0 py-2 pt-4"> 4. </div>
-                                <div className="list-group-item api-list-item border-left-0 border-right-0 py-2 pt-4 border-bottom-0"> 5. </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <GameBody
                     canvas={ true }
                     title="Allumer et eteindre l'ordinateur"
@@ -42,13 +26,6 @@ export default function ShutDown ( ) {
                         );
                     } }
                 >
-                    <div className="container-fluid list-group">
-                        <div className="list-group-item main-list-item border-left-0 border-right-0 py-2 pt-4 border-top-0"> 1. </div>
-                        <div className="list-group-item main-list-item border-left-0 border-right-0 py-2 pt-4"> 2. </div>
-                        <div className="list-group-item main-list-item border-left-0 border-right-0 py-2 pt-4"> 3. </div>
-                        <div className="list-group-item main-list-item border-left-0 border-right-0 py-2 pt-4"> 4. </div>
-                        <div className="list-group-item main-list-item border-left-0 border-right-0 py-2 pt-4"> 5. </div>
-                    </div>
                 </GameBody>
             </div>
         </Fragment>
@@ -56,3 +33,6 @@ export default function ShutDown ( ) {
 };
 
 ShutDown.page = page;
+ShutDown.scripts = [
+    "/script/extends/shut-down.js"
+];
