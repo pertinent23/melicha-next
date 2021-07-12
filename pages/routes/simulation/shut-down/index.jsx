@@ -18,10 +18,9 @@ export default function ShutDown ( ) {
                     gameInfos={ function () {
                         return (
                             <Fragment>
-                                <span className="py-2"> Le but du jeux est de remplire les vides à l'aide des mots proposés. </span>
-                                <span className="ml-4"> - Pour remplire une colone il suffit de cliquer sur son identifiant </span>
-                                <span className="ml-4"> - Pour effacer le contenu d'une colone il suffit de cliquer sur son identifiant une seconde foi.  </span>
-                                <span className="ml-4"> - Après avoir fini de remplir, cliquer sur suivant pour continuer.  </span>
+                                <span className="py-2"> Le but de cette simulation est de Montrer la procédure d'allumage d'un ordinateur donc pour la mener à bien: </span>
+                                <span className="ml-4"> - Lancer l'unité centrale de votre ordinateur. </span>
+                                <span className="ml-4"> - Puis lancer l'écran.  </span>
                             </Fragment>
                         );
                     } }

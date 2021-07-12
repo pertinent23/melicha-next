@@ -3,10 +3,10 @@ Digital( function ( $ ) {
     const answer = [ 'r1', 'r2', 'r3', 'r4' ];
     const data = [];
     const questions = {
-        "l’ordinateur est composé uniquement des composants de base ": false,
-        "le port jack est encore appelé port audio": true,
-        "e port VGA sert à connecter un écran à la carte graphique ": true,
-        "l’unité centrale contient les éléments externes de l’ordinateur ": false
+        "L’informatique est-elle la science du traitement automatique et rationnel de l’information à l’aide de l’ordinateur ? ": true,
+        "l’information est une nouvelle qu’on passe à la télévision": false,
+        "l’ordinateur est une machine automatique de traitement de l’information": true,
+        "le matériel et le logiciel sont les deux parties de l’ordinateur  ": true
     };
 
     let i = 0;

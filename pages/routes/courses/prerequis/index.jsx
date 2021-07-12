@@ -88,7 +88,7 @@ export default function Prerequis () {
                                 </div>
                             </div>
                         </div>
-                        <div className="container-fluid retenons py-5"> Repondez à toutes les questions pour vérifier votre nniveau. </div>
+                        <div className="container-fluid retenons py-5 text-center"> Repondez à toutes les questions pour vérifier votre nniveau. </div>
                     </div>
                 </div>
             </div>

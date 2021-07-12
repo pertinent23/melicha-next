@@ -93,7 +93,7 @@ const Drawer = {
             context.fillRect( 380 - 4, 120, 90 - 3, 70 );
         return this;
     },
-    showStatus( color ) {
+    showStatusPc( color ) {
         const context = this.context;
             context.strokeStyle = context.fillStyle = color;
             context.lineWidth = 8;
@@ -102,14 +102,26 @@ const Drawer = {
                 context.arc( 420, 280, 3, 0, Math.PI * 2 );
             context.fill();
             context.stroke();
-
+        return this;
+    },
+    showStatusScreen( color ) {
+        const context = this.context;
+            context.strokeStyle = context.fillStyle = color;
+            context.lineWidth = 8;
+            context.lineCap = "round";
             context.beginPath();
                 context.arc( 225, 265, 3, 0, Math.PI * 2 );
             context.fill();
             context.stroke();
         return this;
     },
-    addPowerButton( color ) {
+    showStatus( color ) {
+        this
+            .showStatusPc( color )
+            .showStatusScreen( color );
+        return this;
+    },
+    addPowerButtonPc( color ) {
         const 
             context = this.context,
             k = Math.PI / 180;
@@ -123,51 +135,113 @@ const Drawer = {
             context.stroke();
         return this;
     },
+    addPowerButtonScreen( color ) {
+        const 
+            context = this.context,
+            k = Math.PI / 180;
+            context.strokeStyle = context.fillStyle = color;
+            context.lineWidth = 2;
+            context.lineCap = "round";
+            context.beginPath();
+                context.arc( 320, 265, 6, k * -50, k * 230 );
+                context.moveTo( 320, 257 );
+                context.lineTo( 320, 265 );
+            context.stroke();
+        return this;
+    },
     init( getPuzz ) {
+        let screen = false, pc = false, state = 'initial' //pending on;
         const 
             context = this.context,
             obj = this;
                 obj.drawScreen();
                 obj.drawUPC();
                 obj.showStatus( Colors.black );
-                obj.addPowerButton( Colors.red );
-                    getPuzz( 410, 145, 20, 20 ).on( 'click', function () {
-                        if ( obj.status === 'off' && obj.state === 'initial' ) {
-                            obj.showScreen( Colors.full );
-                            obj.showStatus( Colors.blue );
-                            obj.addPowerButton( Colors.blue );
+                obj.addPowerButtonPc( Colors.red );
+                obj.addPowerButtonScreen( Colors.red );
+            
+            const finalScreen = function () {
+                obj.showScreen( Colors.blue );
+                    obj.status = 'on';
+                    obj.state = 'initial';
+                    context.font = "1.3em serif";
+                    context.fillStyle = Colors.white;
+                return context.fillText( "Bienvenue !! ", 180, 190 );
+            };
+            
+            const startPc = function () {
+                if ( !screen ) {
+                    obj.showScreen( Colors.black );
+                } else if ( state == 'on' && screen && pc ) {
+                    finalScreen();
+                }
+
+                if ( state === 'initial' && pc ) {
+                    obj.showScreen( Colors.full );
+                    obj.showStatus( Colors.blue );
+                    obj.addPowerButtonPc( Colors.blue );
+                        context.fillStyle = Colors.white;
+                        context.font = "1.3em serif";
+                        state = 'pending';
+                        let counter = 0;
+                        Digital.animate( function () {
+                            if ( screen ) {
+                                counter++;
+                                obj.showStatusScreen( Colors.blue );
+                                obj.showScreen( Colors.full );
                                 context.fillStyle = Colors.white;
-                                context.font = "1.3em serif";
-                                let counter = 0;
-                                Digital.animate( function () {
-                                    counter++;
-                                    obj.showScreen( Colors.full );
-                                    context.fillStyle = Colors.white;
-                                    const 
-                                        e = counter % 10;
-                                        obj.state = 'pending';
-                                    return context.fillText( e > 5 ? "MCApp." : "MCApp...", 180, 190 );
-                                }, {
-                                    from: [ 0 ],
-                                    to: [ 100 ],
-                                }, {
-                                    duration: 3000,
-                                    then: function () {
-                                        obj.showScreen( Colors.blue );
-                                        obj.showStatus( Colors.green );
-                                            obj.addPowerButton( Colors.green );
-                                            obj.status = 'on';
-                                            obj.state = 'initial';
-                                            context.font = "1.3em serif";
-                                            context.fillStyle = Colors.white;
-                                        return context.fillText( "Bienvenue !! ", 180, 190 );
-                                    }
-                                } );
-                        } else if ( obj.status === 'on' ) {
+                                const 
+                                    e = counter % 10;
+                                    state = 'pending';
+                                return context.fillText( e > 5 ? "MCApp." : "MCApp...", 180, 190 );
+                            } else {
+                                obj.showScreen( Colors.black );
+                            }
+                        }, {
+                            from: [ 0 ],
+                            to: [ 100 ],
+                        }, {
+                            duration: 3000,
+                            then: function () {
+                                state = 'on';
+                                if ( screen ) {
+                                    obj.showStatus( Colors.green );
+                                    obj.addPowerButtonPc( Colors.green );
+                                    finalScreen(); 
+                                } else {
+                                    obj.showScreen( Colors.black );
+                                }
+                            }
+                        } );
+                } 
+            };
+
+                    getPuzz( 310, 250, 30, 30 ).on( 'click', function () {
+                        screen = !screen;
+                        if ( screen ) {
+                            obj.addPowerButtonScreen( Colors.green );
+                            obj.showStatusScreen( Colors.green );
+                        } else {
+                            obj.addPowerButtonScreen( Colors.red );
+                            obj.showStatusScreen( Colors.black );
+                        }
+
+                        startPc();
+                    } );
+
+                    getPuzz( 410, 145, 20, 20 ).on( 'click', function () {
+                        if ( state === 'pending' )
+                            return;
+                        pc = !pc;
+                        if ( !pc ) {
+                            state = 'initial';
+                            obj.addPowerButtonPc( Colors.red );
+                            obj.showStatusPc( Colors.black );
                             obj.showScreen( Colors.black );
-                            obj.showStatus( Colors.black );
-                            obj.addPowerButton( Colors.red );
-                            obj.status = 'off';
+                        } else {
+                            obj.addPowerButtonPc( Colors.blue );
+                            obj.showStatusPc( Colors.blue );
+                            startPc();
                         }
                     } );
         return this;

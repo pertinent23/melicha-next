@@ -18,10 +18,9 @@ export default function LinkCard () {
                     gameInfos={ function () {
                         return (
                             <Fragment>
-                                <span className="py-2"> Le but du jeux est de remplire les vides à l'aide des mots proposés. </span>
-                                <span className="ml-4"> - Pour remplire une colone il suffit de cliquer sur son identifiant </span>
-                                <span className="ml-4"> - Pour effacer le contenu d'une colone il suffit de cliquer sur son identifiant une seconde foi.  </span>
-                                <span className="ml-4"> - Après avoir fini de remplir, cliquer sur suivant pour continuer.  </span>
+                                <span className="py-2"> Le but du jeux est de determner le processus et classer ses étapes. </span>
+                                <span className="ml-4"> - Clique sur monter et descendre pour reclasser les étapes </span>
+                                <span className="ml-4"> - Appuyez sur verifier dès que vous aurez fini.  </span>
                             </Fragment>
                         );
                     } }
